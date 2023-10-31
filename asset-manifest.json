@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/ragini-pandey/static/css/main.bf538fe7.css",
+    "main.js": "/ragini-pandey/static/js/main.001db996.js",
+    "static/media/HeroImage.jpg": "/ragini-pandey/static/media/HeroImage.40976ff97df75c8b1fe0.jpg",
+    "index.html": "/ragini-pandey/index.html",
+    "main.bf538fe7.css.map": "/ragini-pandey/static/css/main.bf538fe7.css.map",
+    "main.001db996.js.map": "/ragini-pandey/static/js/main.001db996.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bf538fe7.css",
+    "static/js/main.001db996.js"
+  ]
+}
