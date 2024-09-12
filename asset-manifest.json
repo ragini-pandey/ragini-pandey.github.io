@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.bf538fe7.css",
-    "main.js": "/static/js/main.89053802.js",
+    "main.js": "/static/js/main.3945ba77.js",
     "static/media/Ragini.jpg": "/static/media/Ragini.e8a03a2e1b4aeb5982ad.jpg",
     "index.html": "/index.html",
     "main.bf538fe7.css.map": "/static/css/main.bf538fe7.css.map",
-    "main.89053802.js.map": "/static/js/main.89053802.js.map"
+    "main.3945ba77.js.map": "/static/js/main.3945ba77.js.map"
   },
   "entrypoints": [
     "static/css/main.bf538fe7.css",
-    "static/js/main.89053802.js"
+    "static/js/main.3945ba77.js"
   ]
 }
