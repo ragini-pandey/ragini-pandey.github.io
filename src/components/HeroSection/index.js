@@ -5,6 +5,10 @@ import Typewriter from 'typewriter-effect';
 import { Bio } from '../../data/constants';
 
 const HeroSection = () => {
+
+    const randomNumber = Math.floor(Math.random() * 3) + 1;
+    const randomImage = `Ragini ${randomNumber}.jpg`;
+
     return (
         <div id="about">
             <HeroContainer>
@@ -31,7 +35,7 @@ const HeroSection = () => {
                     </HeroLeftContainer>
 
                     <HeroRightContainer id="Right">
-                        <Img src={`${process.env.PUBLIC_URL}/Ragini.jpg`} alt="Ragini Pandey img" />
+                        <Img src={`${process.env.PUBLIC_URL}/${randomImage}`} alt="Ragini Pandey img" />
                     </HeroRightContainer>
                 </HeroInnerContainer>
             </HeroContainer>
