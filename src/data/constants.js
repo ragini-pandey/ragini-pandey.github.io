@@ -45,6 +45,10 @@ export const skills = [
         image: "https://cdn.worldvectorlogo.com/logos/redux.svg",
       },
       {
+        name: "React Query",
+        image: "https://images.seeklogo.com/logo-png/43/1/react-query-logo-png_seeklogo-435661.png",
+      },
+      {
         name: "Zustand",
         image:
           "https://user-images.githubusercontent.com/958486/218346783-72be5ae3-b953-4dd7-b239-788a882fdad6.svg",
@@ -95,10 +99,16 @@ export const skills = [
         name: "MySQL",
         image:
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
-      }, {
+      },
+      {
         name: "MongoDB",
         image:
           "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg",
+      },
+      {
+        name: "Amazon Web Services (AWS)",
+        image:
+          "https://cdn.worldvectorlogo.com/logos/aws-2.svg",
       },
     ],
   },
