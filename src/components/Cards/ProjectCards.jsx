@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 const Button = styled.button`
@@ -14,6 +13,7 @@ const Button = styled.button`
   cursor: pointer;
   transition: all 0.8s ease-in-out;
 `;
+
 const Card = styled.div`
   width: 330px;
   height: 490px;
@@ -70,6 +70,7 @@ const Details = styled.div`
   gap: 0px;
   padding: 0px 2px;
 `;
+
 const Title = styled.div`
   font-size: 20px;
   font-weight: 600;
@@ -110,6 +111,7 @@ const Members = styled.div`
   align-items: center;
   padding-left: 10px;
 `;
+
 const Avatar = styled.img`
   width: 38px;
   height: 38px;
@@ -139,7 +141,7 @@ const ProjectCards = ({ project, setOpenModal }) => {
           <Avatar src={member.img} />
         ))}
       </Members>
-      {/* <Button>View Project</Button> */}
+      <Button>View Project</Button>
     </Card>
   );
 };
