@@ -2,6 +2,7 @@
 import { Container, Wrapper, Title, CardContainer } from './ProjectsStyle';
 import ProjectCard from '../Cards/ProjectCards';
 import { projects } from '../../data/constants';
+import { CodeTitle } from '../Experience';
 
 const Projects = ({ openModal, setOpenModal }) => {
   // const [toggle, setToggle] = useState('all');
@@ -10,7 +11,9 @@ const Projects = ({ openModal, setOpenModal }) => {
   return (
     <Container id="projects">
       <Wrapper>
-        <Title>Projects</Title>
+        <CodeTitle>
+          &lt; <span>Projects</span> /&gt;
+        </CodeTitle>
         {/* <Desc>
           I have worked on a wide range of web apps. Here are some of my projects.
         </Desc>

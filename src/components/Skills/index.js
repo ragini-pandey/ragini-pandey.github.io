@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { CodeTitle } from '../Experience';
 import { skills } from '../../data/constants';
 
 const getYearsAndMonthsSinceJoining = () => {
@@ -140,7 +141,9 @@ const Skills = () => {
   return (
     <Container id="skills">
       <Wrapper>
-        <Title>Skills</Title>
+        <CodeTitle>
+          &lt; <span>Skills</span> /&gt;
+        </CodeTitle>
         <Desc>
           Here are some of my skills on which I have been working on for the past {years} years and {months} months
         </Desc>

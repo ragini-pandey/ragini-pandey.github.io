@@ -36,12 +36,21 @@ const Wrapper = styled.div`
   }
 `;
 
-const Title = styled.div`
+
+export const CodeTitle = styled.h2`
   font-size: 42px;
   text-align: center;
   font-weight: 600;
   margin-top: 20px;
-  color: ${({ theme }) => theme.text_primary};
+  margin-bottom: 20px;
+  color: ${({ theme }) => theme.text_secondary};
+  font-family: 'Fira Code', monospace;
+  letter-spacing: 1px;
+
+  span {
+    color: ${({ theme }) => theme.text_primary};
+  }
+
   @media (max-width: 768px) {
     margin-top: 12px;
     font-size: 32px;
@@ -74,7 +83,9 @@ const index = () => {
   return (
     <Container id="experience">
       <Wrapper>
-        <Title>Experience</Title>
+        <CodeTitle>
+          &lt; <span>Experience</span> /&gt;
+        </CodeTitle>
         {/* <Desc>My work experience as a software engineer.</Desc> */}
         <TimelineSection>
           <Timeline>

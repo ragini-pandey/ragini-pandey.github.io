@@ -1,7 +1,8 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import styled from 'styled-components'
 import emailjs from '@emailjs/browser';
 import { Snackbar } from '@mui/material';
+import { CodeTitle } from '../Experience';
 
 const Container = styled.div`
 display: flex;
@@ -143,7 +144,9 @@ const Contact = () => {
   return (
     <Container>
       <Wrapper>
-        <Title>Contact</Title>
+        <CodeTitle>
+          &lt; <span>Contact</span> /&gt;
+        </CodeTitle>
         <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
@@ -156,7 +159,7 @@ const Contact = () => {
         <Snackbar
           open={open}
           autoHideDuration={6000}
-          onClose={()=>setOpen(false)}
+          onClose={() => setOpen(false)}
           message="Email sent successfully!"
           severity="success"
         />
