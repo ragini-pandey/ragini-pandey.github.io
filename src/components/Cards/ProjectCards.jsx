@@ -16,7 +16,7 @@ const Button = styled.button`
 
 const Card = styled.div`
   width: 330px;
-  height: 490px;
+  height: 425px;
   background-color: ${({ theme }) => theme.card};
   cursor: pointer;
   border-radius: 10px;
@@ -141,7 +141,7 @@ const ProjectCards = ({ project, setOpenModal }) => {
           <Avatar src={member.img} />
         ))}
       </Members>
-      <Button>View Project</Button>
+      {/* <Button>View Project</Button> */}
     </Card>
   );
 };

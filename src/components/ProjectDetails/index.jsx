@@ -66,11 +66,12 @@ const Desc = styled.div`
 `;
 
 const Image = styled.img`
-    width: 100%;
-    object-fit: cover;
-    border-radius: 12px;
-    margin-top: 30px;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+  width: ${({ width }) => width || '100%'};
+  height: ${({ height }) => height || 'auto'};
+  object-fit: cover;
+  border-radius: 12px;
+  margin-top: 30px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
 `;
 
 const Label = styled.div`
@@ -197,7 +198,7 @@ const index = ({ openModal, setOpenModal }) => {
                         }}
                         onClick={() => setOpenModal({ state: false, project: null })}
                     />
-                    <Image src={project?.image} />
+                    <Image src={project?.image} width="200px" height="200px"/>
                     <Title>{project?.title}</Title>
                     <Date>{project.date}</Date>
                     <Tags>
