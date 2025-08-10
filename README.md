@@ -9,9 +9,9 @@ This project showcases my skills, projects, and experiences as a **Web Developer
 ## 📸 Preview
 Here’s a glimpse of my portfolio:
 
-<img width="700px" src="https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/Screenshot1.png"/>
-<img width="700px" src="https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/Screenshot2.png"/>
-<img width="700px" src="https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/Screenshot3.png"/>
+<img width="900px" src="https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/Screenshot1.png"/>
+<img width="900px" src="https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/Screenshot2.png"/>
+<img width="900px" src="https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/Screenshot3.png"/>
 
 ---
 
