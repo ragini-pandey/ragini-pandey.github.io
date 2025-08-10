@@ -5,19 +5,19 @@ import { skills } from '../../data/constants';
 const getYearsAndMonthsSinceJoining = () => {
   const joinDate = new Date('2022-06-01');
   const currentDate = new Date();
-  
+
   let years = currentDate.getFullYear() - joinDate.getFullYear();
   let months = currentDate.getMonth() - joinDate.getMonth();
-  
+
   if (months < 0 || (months === 0 && currentDate.getDate() < joinDate.getDate())) {
     years--;
     months += 12;
   }
-  
+
   if (currentDate.getDate() < joinDate.getDate()) {
     months--;
   }
-  
+
   return { years, months };
 };
 
@@ -103,7 +103,7 @@ const SkillTitle = styled.h2`
 
 const SkillList = styled.div`
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
   margin-bottom: 20px;
@@ -143,7 +143,7 @@ const Skills = () => {
       <Wrapper>
         <Title>Skills</Title>
         <Desc>
-          Here are some of my skills on which I have been working on for the past {years} years and {months} months.
+          Here are some of my skills on which I have been working on for the past {years} years and {months} months
         </Desc>
         <SkillsContainer>
           {skills.map((skill) => (

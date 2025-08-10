@@ -106,7 +106,9 @@ function Footer() {
             <InstagramIcon />
           </SocialMediaIcon>
         </SocialMediaIcons>
-      <Copyright>&copy; 2024 Ragini Pandey. All rights reserved.</Copyright>
+        <Copyright>
+          &copy; {new Date().getFullYear()} Ragini Pandey. All rights reserved
+        </Copyright>
       </FooterWrapper>
     </FooterContainer>
   );

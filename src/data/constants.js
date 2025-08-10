@@ -2,7 +2,7 @@ export const Bio = {
   name: "Ragini Pandey",
   roles: ["Full Stack Developer", "Programmer"],
   description:
-    "I am a Full-stack developer with a demonstrated history of working in the information technology and product development industry.",
+    "I am a Full-stack developer with a demonstrated history of working in the information technology and product development industry",
   github: "https://github.com/ragini-pandey",
   resume:
     "https://drive.google.com/file/d/1thW36dF6LNO-rlR5ggMX7bgvQ_zjxGWR/view?usp=sharing",
@@ -65,6 +65,10 @@ export const skills = [
       {
         name: "CSS",
         image: "https://cdn.worldvectorlogo.com/logos/css-3.svg",
+      },
+      {
+        name: "Tailwind CSS",
+        image: "https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg",
       },
       {
         name: "Bootstrap",

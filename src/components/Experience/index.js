@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem from "@mui/lab/TimelineItem";
@@ -76,7 +75,7 @@ const index = () => {
     <Container id="experience">
       <Wrapper>
         <Title>Experience</Title>
-        <Desc>My work experience as a software engineer.</Desc>
+        {/* <Desc>My work experience as a software engineer.</Desc> */}
         <TimelineSection>
           <Timeline>
             {experiences.map((experience, index) => (
