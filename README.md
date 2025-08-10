@@ -2,9 +2,9 @@
 Welcome to my portfolio! This project showcases my skills, projects, and experiences as a web developer.
 
 ## Some Images:
-<img width="450px;" src="https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/Screenshot1.png"/>
-<img width="450px;" src="https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/Screenshot2.png"/>
-<img width="450px;" src="https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/Screenshot3.png"/>
+<img width="600px;" src="https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/Screenshot1.png"/>
+<img width="600px;" src="https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/Screenshot2.png"/>
+<img width="600px;" src="https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/Screenshot3.png"/>
 
 
 ## Introduction
