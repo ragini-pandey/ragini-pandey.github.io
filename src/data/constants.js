@@ -14,17 +14,9 @@ export const Bio = {
 
 export const skills = [
   {
-    title: "Languages",
-    skills: [
-      { name: "JavaScript", image: "https://cdn.worldvectorlogo.com/logos/logo-javascript.svg" },
-      { name: "TypeScript", image: "https://cdn.worldvectorlogo.com/logos/typescript.svg" },
-      { name: "Java", image: "https://cdn.worldvectorlogo.com/logos/java.svg" }
-    ],
-  },
-  {
     title: "Frontend",
     skills: [
-      { name: "ReactJS", image: "https://cdn.worldvectorlogo.com/logos/react-2.svg" },
+      { name: "React", image: "https://cdn.worldvectorlogo.com/logos/react-2.svg" },
       { name: "Redux", image: "https://cdn.worldvectorlogo.com/logos/redux.svg" },
       { name: "React Query", image: "https://logo.svgcdn.com/l/react-query-icon.svg" }, // replaced
       { name: "Zustand", image: "https://user-images.githubusercontent.com/958486/218346783-72be5ae3-b953-4dd7-b239-788a882fdad6.svg" },
@@ -56,6 +48,14 @@ export const skills = [
     ]
   },
   {
+    title: "Languages",
+    skills: [
+      { name: "JavaScript", image: "https://cdn.worldvectorlogo.com/logos/logo-javascript.svg" },
+      { name: "TypeScript", image: "https://cdn.worldvectorlogo.com/logos/typescript.svg" },
+      { name: "Java", image: "https://cdn.worldvectorlogo.com/logos/java.svg" }
+    ],
+  },
+  {
     title: "Others",
     skills: [
       { name: "Git", image: "https://cdn.worldvectorlogo.com/logos/git-icon.svg" },
@@ -79,10 +79,10 @@ export const experiences = [
     project:
       "Global provider of professional information, software solutions, and services for clinicians, accountants, lawyers, and tax, finance, audit, risk, compliance, and regulatory sectors.",
     projectRole: "Full stack developer",
-    desc: "\u2022 Full-stack development to build and maintain the Procore monolith and micro frontends. \n \u2022  Developed custom UI components using React.js and TypeScript, integrating them with Procore APIs.",
+    desc: "\u2022 Full-stack development to build and maintain the Procore monolith and micro frontends. \n \u2022  Developed custom UI components using React and TypeScript, integrating them with Procore APIs.",
     skills: [
       "JavaScript",
-      "React.js",
+      "React",
       "Redux",
       "Zustand",
       "Node.js",
@@ -105,10 +105,10 @@ export const experiences = [
     project:
       "Global provider of professional information, software solutions, and services for clinicians, accountants, lawyers, and tax, finance, audit, risk, compliance, and regulatory sectors.",
     projectRole: "Full stack developer",
-    desc: "\u2022 Full-stack development to build and maintain CCH IQ Workbench and CCH IQ Profile Manager. \n \u2022 Developed API services using Node.js/Java/Nest.js.\n \u2022 Created custom UI components in React.js/Next.js.",
+    desc: "\u2022 Full-stack development to build and maintain CCH IQ Workbench and CCH IQ Profile Manager. \n \u2022 Developed API services using Node.js/Java/Nest.js.\n \u2022 Created custom UI components in React/Next.js.",
     skills: [
       "JavaScript",
-      "React.js",
+      "React",
       "Redux",
       "Node.js",
       "Typescript",

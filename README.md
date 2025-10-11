@@ -16,7 +16,7 @@ Here’s a glimpse of my portfolio:
 ---
 
 ## 📖 Introduction
-This portfolio is built using **React.js** and serves as my **digital identity**.
+This portfolio is built using **React** and serves as my **digital identity**.
 It’s designed to:
 - Showcase my **background, skills, and achievements**.
 - Display my **featured projects** with descriptions and live/demo links.
@@ -34,7 +34,7 @@ It’s designed to:
 ---
 
 ## 🛠️ Tech Stack
-- **Frontend:** React.js, JavaScript, HTML5, CSS3
+- **Frontend:** React, JavaScript, HTML5, CSS3
 - **Styling:** Styled-Components (responsive, mobile-first design)
 - **Version Control:** Git & GitHub
 - **Deployment:** GitHub Pages
