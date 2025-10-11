@@ -16,67 +16,28 @@ export const skills = [
   {
     title: "Languages",
     skills: [
-      {
-        name: "JavaScript",
-        image:
-          "https://cdn.worldvectorlogo.com/logos/logo-javascript.svg",
-      },
-      {
-        name: "TypeScript",
-        image:
-          "https://cdn.worldvectorlogo.com/logos/typescript.svg",
-      },
-      {
-        name: "Java",
-        image:
-          "https://cdn.worldvectorlogo.com/logos/java.svg",
-      }
+      { name: "JavaScript", image: "https://cdn.worldvectorlogo.com/logos/logo-javascript.svg" },
+      { name: "TypeScript", image: "https://cdn.worldvectorlogo.com/logos/typescript.svg" },
+      { name: "Java", image: "https://cdn.worldvectorlogo.com/logos/java.svg" }
     ],
   },
   {
     title: "Frontend",
     skills: [
-      {
-        name: "ReactJS",
-        image:
-          "https://cdn.worldvectorlogo.com/logos/react-2.svg",
-      },
-      {
-        name: "Redux",
-        image: "https://cdn.worldvectorlogo.com/logos/redux.svg",
-      },
-      {
-        name: "React Query",
-        image: "https://logo.svgcdn.com/l/react-query-icon.svg",
-      },
-      {
-        name: "Zustand",
-        image:
-          "https://user-images.githubusercontent.com/958486/218346783-72be5ae3-b953-4dd7-b239-788a882fdad6.svg",
-      },
+      { name: "ReactJS", image: "https://cdn.worldvectorlogo.com/logos/react-2.svg" },
+      { name: "Redux", image: "https://cdn.worldvectorlogo.com/logos/redux.svg" },
+      { name: "React Query", image: "https://logo.svgcdn.com/l/react-query-icon.svg" }, // (see note below)
+      { name: "Zustand", image: "https://user-images.githubusercontent.com/958486/218346783-72be5ae3-b953-4dd7-b239-788a882fdad6.svg" },
       { name: "NextJS", image: "https://cdn.worldvectorlogo.com/logos/nextjs-2.svg" },
-      {
-        name: "HTML",
-        image: "https://cdn.worldvectorlogo.com/logos/html-1.svg",
-      },
-      {
-        name: "CSS",
-        image: "https://cdn.worldvectorlogo.com/logos/css-3.svg",
-      },
-      {
-        name: "Tailwind CSS",
-        image: "https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg",
-      },
-      {
-        name: "Bootstrap",
-        image:
-          "https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg",
-      },
+      { name: "HTML", image: "https://cdn.worldvectorlogo.com/logos/html-1.svg" },
+      { name: "CSS", image: "https://cdn.worldvectorlogo.com/logos/css-3.svg" },
+      { name: "Tailwind CSS", image: "https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg" },
+      { name: "Bootstrap", image: "https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg" },
       { name: "Material UI", image: "https://cdn.worldvectorlogo.com/logos/material-ui-1.svg" },
-      { name: "Storybook", image: "https://cdn.worldvectorlogo.com/logos/storybook-icon.svg" },
-      { name: "Jest", image: "https://cdn.worldvectorlogo.com/logos/jest-2.svg" },
+      { name: "Storybook", image: "https://raw.githubusercontent.com/storybookjs/brand/main/icon/icon-storybook-default.svg" },
+      { name: "Jest", image: "https://cdn.worldvectorlogo.com/logos/jest-2.svg" }
     ],
-  }, ,
+  },
   {
     title: "Backend",
     skills: [
@@ -89,41 +50,21 @@ export const skills = [
       { name: "PostgreSQL", image: "https://cdn.worldvectorlogo.com/logos/postgresql.svg" },
       { name: "MongoDB", image: "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg" },
       { name: "Redis", image: "https://cdn.worldvectorlogo.com/logos/redis.svg" },
-      { name: "Kafka", image: "https://cdn.worldvectorlogo.com/logos/apache-kafka.svg" },
+      { name: "Kafka", image: "https://www.vectorlogo.zone/logos/apache_kafka/apache_kafka-icon.svg" },
       { name: "AWS", image: "https://cdn.worldvectorlogo.com/logos/aws-2.svg" },
-      { name: "Firebase", image: "https://cdn.worldvectorlogo.com/logos/firebase-1.svg" },
+      { name: "Firebase", image: "https://cdn.worldvectorlogo.com/logos/firebase-1.svg" }
     ]
   },
   {
     title: "Others",
     skills: [
-      {
-        name: "Git",
-        image:
-          "https://cdn.worldvectorlogo.com/logos/git-icon.svg",
-      },
-      {
-        name: "GitHub",
-        image:
-          "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-      },
-      {
-        name: "Docker",
-        image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg",
-      },
+      { name: "Git", image: "https://cdn.worldvectorlogo.com/logos/git-icon.svg" },
+      { name: "GitHub", image: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" },
+      { name: "Docker", image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" },
       { name: "Kubernetes", image: "https://cdn.worldvectorlogo.com/logos/kubernetes.svg" },
-      {
-        name: "VS Code",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519",
-      },
-      {
-        name: "Postman",
-        image:
-          "https://cdn.worldvectorlogo.com/logos/postman.svg",
-      },
-      { name: "Figma", image: "https://cdn.worldvectorlogo.com/logos/figma-1.svg" },
+      { name: "VS Code", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519" },
+      { name: "Postman", image: "https://cdn.worldvectorlogo.com/logos/postman.svg" },
+      { name: "Figma", image: "https://www.vectorlogo.zone/logos/figma/figma-icon.svg" }
     ],
   },
 ];
