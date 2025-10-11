@@ -26,7 +26,7 @@ export const skills = [
     skills: [
       { name: "ReactJS", image: "https://cdn.worldvectorlogo.com/logos/react-2.svg" },
       { name: "Redux", image: "https://cdn.worldvectorlogo.com/logos/redux.svg" },
-      { name: "React Query", image: "https://logo.svgcdn.com/l/react-query-icon.svg" }, // (see note below)
+      { name: "React Query", image: "https://logo.svgcdn.com/l/react-query-icon.svg" }, // replaced
       { name: "Zustand", image: "https://user-images.githubusercontent.com/958486/218346783-72be5ae3-b953-4dd7-b239-788a882fdad6.svg" },
       { name: "NextJS", image: "https://cdn.worldvectorlogo.com/logos/nextjs-2.svg" },
       { name: "HTML", image: "https://cdn.worldvectorlogo.com/logos/html-1.svg" },
@@ -61,7 +61,7 @@ export const skills = [
       { name: "Git", image: "https://cdn.worldvectorlogo.com/logos/git-icon.svg" },
       { name: "GitHub", image: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" },
       { name: "Docker", image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" },
-      { name: "Kubernetes", image: "https://cdn.worldvectorlogo.com/logos/kubernetes.svg" },
+      { name: "Kubernetes", image: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/kubernetes.svg" },
       { name: "VS Code", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519" },
       { name: "Postman", image: "https://cdn.worldvectorlogo.com/logos/postman.svg" },
       { name: "Figma", image: "https://www.vectorlogo.zone/logos/figma/figma-icon.svg" }
