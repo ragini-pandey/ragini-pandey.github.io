@@ -18,7 +18,7 @@ export const skills = [
     skills: [
       { name: "React", image: "https://cdn.worldvectorlogo.com/logos/react-2.svg" },
       { name: "Redux", image: "https://cdn.worldvectorlogo.com/logos/redux.svg" },
-      { name: "React Query", image: "https://logo.svgcdn.com/l/react-query-icon.svg" }, // replaced
+      { name: "React Query", image: "https://logo.svgcdn.com/l/react-query-icon.svg" },
       { name: "Zustand", image: "https://user-images.githubusercontent.com/958486/218346783-72be5ae3-b953-4dd7-b239-788a882fdad6.svg" },
       { name: "NextJS", image: "https://cdn.worldvectorlogo.com/logos/nextjs-2.svg" },
       { name: "HTML", image: "https://cdn.worldvectorlogo.com/logos/html-1.svg" },
@@ -26,6 +26,8 @@ export const skills = [
       { name: "Tailwind CSS", image: "https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg" },
       { name: "Bootstrap", image: "https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg" },
       { name: "Material UI", image: "https://cdn.worldvectorlogo.com/logos/material-ui-1.svg" },
+      { name: "shadcn/ui", image: "https://ui.shadcn.com/android-chrome-512x512.png" },
+      { name: "Sass (SCSS)", image: "https://cdn.worldvectorlogo.com/logos/sass-1.svg" },
       { name: "Storybook", image: "https://raw.githubusercontent.com/storybookjs/brand/main/icon/icon-storybook-default.svg" },
       { name: "Jest", image: "https://cdn.worldvectorlogo.com/logos/jest-2.svg" }
     ],
