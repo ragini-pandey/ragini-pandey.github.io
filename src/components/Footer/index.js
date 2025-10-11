@@ -60,12 +60,12 @@ const NavLink = styled.a`
   }
 `;
 
-const SocialMediaIcons = styled.div`
+export const SocialMediaIcons = styled.div`
   display: flex;
   margin-top: 1rem;
 `;
 
-const SocialMediaIcon = styled.a`
+export const SocialMediaIcon = styled.a`
   display: inline-block;
   margin: 0 1rem;
   font-size: 1.5rem;
@@ -106,9 +106,9 @@ function Footer() {
             <InstagramIcon />
           </SocialMediaIcon>
         </SocialMediaIcons>
-        <Copyright>
+        {/* <Copyright>
           &copy; {new Date().getFullYear()} Ragini Pandey. All rights reserved
-        </Copyright>
+        </Copyright> */}
       </FooterWrapper>
     </FooterContainer>
   );
