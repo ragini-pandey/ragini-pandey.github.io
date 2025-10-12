@@ -226,7 +226,7 @@ export const projects = [
     github: "https://github.com/ragini-pandey/linkedin-clone",
     webapp: "https://linkedin-clone-4d2c2.web.app",
     image:
-      "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/Screenshot1.png?raw=true",
+      "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/linkedIn-clone.png?raw=true",
   },
   {
     id: 5,
@@ -239,7 +239,7 @@ export const projects = [
     github: "https://github.com/ragini-pandey/whatsapp-clone",
     webapp: "https://whatsapp-clone-4d2c2.web.app",
     image:
-      "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/Screenshot1.png?raw=true",
+      "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/whatsapp-clone.png?raw=true",
   },
 ];
 
