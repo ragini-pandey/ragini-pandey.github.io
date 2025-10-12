@@ -130,7 +130,7 @@ export const experiences = [
 export const education = [
   {
     id: 0,
-    img: "https://pbs.twimg.com/profile_images/1337364620105805825/Y_5SbcCA_400x400.jpg",
+    img: "https://pbs.twimg.com/profile_images/1742122670190456832/A5rIuDsa_200x200.jpg",
     school: "Centre for Development of Advanced Computing (C-DAC)",
     date: "Sept 2021 - April 2022",
     grade: "A",
@@ -166,7 +166,7 @@ export const projects = [
   {
     id: 0,
     title: "GraphQL Weather App",
-    date: "2023",
+    date: "Oct 2025",
     description:
       "Weather dashboard using GraphQL (StepZen/Apollo style setup) to fetch current and forecast data with typed queries. Clean UI with search, location, and condition cards.",
     tags: ["React", "GraphQL", "Apollo/StepZen"],
@@ -179,7 +179,7 @@ export const projects = [
   {
     id: 1,
     title: "Telegram Clone",
-    date: "2024",
+    date: "Sep 2025",
     description:
       "A full-stack Telegram clone built with Next.js, Convex, Clerk auth, Stream chat, and TailwindCSS. Real-time messaging, channels, reactions, user presence, and robust auth. Deployed for production-ready performance.",
     tags: ["Next.js", "Convex", "Clerk", "Stream", "TailwindCSS"],
@@ -192,7 +192,7 @@ export const projects = [
   {
     id: 2,
     title: "Spotify Clone",
-    date: "Feb 2024",
+    date: "May 2024",
     description:
       "A Spotify Clone built using React JS, Redux, and Material UI. It features a login page where users can sign in with their Spotify account. The app includes a sidebar with navigation to playlists, albums, and top charts. Users can play, pause, and skip songs with a full-featured music player.",
     tags: ["React Js", "Node JS"],
@@ -205,7 +205,7 @@ export const projects = [
   {
     id: 3,
     title: "Google Docs Clone",
-    date: "2023",
+    date: "Mar 2024",
     description:
       "Collaborative Google Docs-style editor with rich-text formatting, real-time multiuser editing, and document persistence. Built for smooth UX and low latency.",
     tags: ["React", "Rich Text", "Realtime"],
@@ -231,7 +231,7 @@ export const projects = [
   {
     id: 5,
     title: "Whatsapp Clone",
-    date: "Jul 2024",
+    date: "Aug 2023",
     description:
       "A WhatsApp clone made with React JS, Firebase, and Material UI. It has Phone Authentication, Real-time Database. It has a chat room where users can chat with each other. It has a sidebar where users can see all the chat rooms and can create a new chat room. It has a login page where users can log in with their Google account.",
     tags: ["React Js", "Firebase", "Firestore", "Node JS"],
@@ -242,6 +242,7 @@ export const projects = [
       "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/whatsapp-clone.png?raw=true",
   },
 ];
+
 
 
 export const TimeLineData = [
