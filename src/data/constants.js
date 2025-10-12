@@ -213,7 +213,7 @@ export const projects = [
     github: "https://github.com/ragini-pandey/google-docs-clone",
     webapp: "https://google-docs-clone-zv83.onrender.com/",
     image:
-      "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/Screenshot1.png?raw=true",
+      "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/demo.gif?raw=true",
   },
   {
     id: 4,
