@@ -164,7 +164,59 @@ export const education = [
 
 export const projects = [
   {
+    id: 0,
+    title: "GraphQL Weather App",
+    date: "2023",
+    description:
+      "Weather dashboard using GraphQL (StepZen/Apollo style setup) to fetch current and forecast data with typed queries. Clean UI with search, location, and condition cards.",
+    tags: ["React", "GraphQL", "Apollo/StepZen"],
+    category: "web app",
+    github: "https://github.com/ragini-pandey/graphql-weather-app",
+    webapp: "https://graphql-weather-app.vercel.app",
+    image:
+      "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/graphql.png?raw=true",
+  },
+  {
     id: 1,
+    title: "Telegram Clone",
+    date: "2024",
+    description:
+      "A full-stack Telegram clone built with Next.js, Convex, Clerk auth, Stream chat, and TailwindCSS. Real-time messaging, channels, reactions, user presence, and robust auth. Deployed for production-ready performance.",
+    tags: ["Next.js", "Convex", "Clerk", "Stream", "TailwindCSS"],
+    category: "web app",
+    github: "https://github.com/ragini-pandey/telegram-clone",
+    webapp: "https://telegram-clone-tau.vercel.app",
+    image:
+      "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/telegramclone.png?raw=true",
+  },
+  {
+    id: 2,
+    title: "Spotify Clone",
+    date: "Feb 2024",
+    description:
+      "A Spotify Clone built using React JS, Redux, and Material UI. It features a login page where users can sign in with their Spotify account. The app includes a sidebar with navigation to playlists, albums, and top charts. Users can play, pause, and skip songs with a full-featured music player.",
+    tags: ["React Js", "Node JS"],
+    category: "web app",
+    github: "https://github.com/ragini-pandey/spotify-clone",
+    webapp: "https://spotify-clone-bice-sigma-58.vercel.app/",
+    image:
+      "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/spotifyclone.png?raw=true",
+  },
+  {
+    id: 3,
+    title: "Google Docs Clone",
+    date: "2023",
+    description:
+      "Collaborative Google Docs-style editor with rich-text formatting, real-time multiuser editing, and document persistence. Built for smooth UX and low latency.",
+    tags: ["React", "Rich Text", "Realtime"],
+    category: "web app",
+    github: "https://github.com/ragini-pandey/google-docs-clone",
+    webapp: "https://google-docs-clone-zv83.onrender.com/",
+    image:
+      "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/Screenshot1.png?raw=true",
+  },
+  {
+    id: 4,
     title: "LinkedIn Clone",
     date: "Dec 2023",
     description:
@@ -177,7 +229,7 @@ export const projects = [
       "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/Screenshot1.png?raw=true",
   },
   {
-    id: 2,
+    id: 5,
     title: "Whatsapp Clone",
     date: "Jul 2024",
     description:
@@ -189,59 +241,8 @@ export const projects = [
     image:
       "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/Screenshot1.png?raw=true",
   },
-  {
-    id: 3,
-    title: "Spotify Clone",
-    date: "Feb 2024",
-    description:
-      "A Spotify Clone built using React JS, Redux, and Material UI. It features a login page where users can sign in with their Spotify account. The app includes a sidebar with navigation to playlists, albums, and top charts. Users can play, pause, and skip songs with a full-featured music player.",
-    tags: ["React Js", "Node JS"],
-    category: "web app",
-    github: "https://github.com/ragini-pandey/spotify-clone",
-    webapp: "https://spotify-clone-4d2c2.web.app",
-    image:
-      "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/Screenshot1.png?raw=true",
-  },
-  {
-    id: 4,
-    title: "Telegram Clone",
-    date: "2024",
-    description:
-      "A full-stack Telegram clone built with Next.js, Convex, Clerk auth, Stream chat, and TailwindCSS. Real-time messaging, channels, reactions, user presence, and robust auth. Deployed for production-ready performance.",
-    tags: ["Next.js", "Convex", "Clerk", "Stream", "TailwindCSS"],
-    category: "web app",
-    github: "https://github.com/ragini-pandey/telegram-clone",
-    webapp: "https://telegram-clone-tau.vercel.app",
-    image:
-      "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/Screenshot1.png?raw=true",
-  },
-  {
-    id: 5,
-    title: "GraphQL Weather App",
-    date: "2023",
-    description:
-      "Weather dashboard using GraphQL (StepZen/Apollo style setup) to fetch current and forecast data with typed queries. Clean UI with search, location, and condition cards.",
-    tags: ["React", "GraphQL", "Apollo/StepZen"],
-    category: "web app",
-    github: "https://github.com/ragini-pandey/graphql-weather-app",
-    webapp: "https://graphql-weather-app.vercel.app",
-    image:
-      "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/Screenshot1.png?raw=true",
-  },
-  {
-    id: 6,
-    title: "Google Docs Clone",
-    date: "2023",
-    description:
-      "Collaborative Google Docs-style editor with rich-text formatting, real-time multiuser editing, and document persistence. Built for smooth UX and low latency.",
-    tags: ["React", "Rich Text", "Realtime"],
-    category: "web app",
-    github: "https://github.com/ragini-pandey/google-docs-clone",
-    webapp: "https://google-docs-clone-zv83.onrender.com/",
-    image:
-      "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/Screenshot1.png?raw=true",
-  },
 ];
+
 
 export const TimeLineData = [
   { year: 2017, text: "Started my journey" },
