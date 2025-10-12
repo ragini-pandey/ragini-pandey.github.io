@@ -200,7 +200,7 @@ export const projects = [
     github: "https://github.com/ragini-pandey/spotify-clone",
     webapp: "https://spotify-clone-bice-sigma-58.vercel.app/",
     image:
-      "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/spotifyclone.png?raw=true",
+      "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/spotify-clone.png?raw=true",
   },
   {
     id: 3,
