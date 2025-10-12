@@ -11,7 +11,6 @@ export const Bio = {
   insta: "https://www.instagram.com/pandeyragini2407/",
 };
 
-
 export const skills = [
   {
     title: "Frontend",
@@ -76,22 +75,24 @@ export const experiences = [
     id: 0,
     img: "https://logosandtypes.com/wp-content/uploads/2020/11/procore.svg",
     role: "Software Engineer II",
-    company: "Procore",
+    company: "Procore Technologies",
     date: "January 2025 - Present",
     project:
-      "Global provider of professional information, software solutions, and services for clinicians, accountants, lawyers, and tax, finance, audit, risk, compliance, and regulatory sectors.",
-    projectRole: "Full stack developer",
-    desc: "\u2022 Full-stack development to build and maintain the Procore monolith and micro frontends. \n \u2022  Developed custom UI components using React and TypeScript, integrating them with Procore APIs.",
+      "Procore is a global SaaS platform for construction management, connecting project teams and streamlining workflows across planning, design, and execution.",
+    projectRole: "Full Stack Developer",
+    desc: `
+      • Building and maintaining scalable micro frontends and shared UI components using React, TypeScript, and Zustand.
+      • Modernizing legacy modules from monolith to modular architecture for better performance and maintainability.
+      • Collaborating with backend teams to integrate REST APIs and enhance data-driven dashboards.
+    `,
     skills: [
-      "JavaScript",
       "React",
+      "TypeScript",
       "Redux",
       "Zustand",
       "Node.js",
-      "Typescript",
-      "Express.js",
-      "MySql",
-      "Git",
+      "Express",
+      "MySQL",
       "Docker",
       "AWS",
       "HTML",
@@ -106,23 +107,25 @@ export const experiences = [
     date: "June 2022 - January 2025",
     project:
       "Global provider of professional information, software solutions, and services for clinicians, accountants, lawyers, and tax, finance, audit, risk, compliance, and regulatory sectors.",
-    projectRole: "Full stack developer",
-    desc: "\u2022 Full-stack development to build and maintain CCH IQ Workbench and CCH IQ Profile Manager. \n \u2022 Developed API services using Node.js/Java/Nest.js.\n \u2022 Created custom UI components in React/Next.js.",
+    projectRole: "Full Stack Developer",
+    desc: `
+      • Developed and maintained enterprise tools like CCH IQ Workbench and Profile Manager using React, Next.js, and Node.js.
+      • Designed RESTful and GraphQL APIs with NestJS and Java Spring Boot.
+      • Streamlined CI/CD pipelines and optimized front-end performance, improving load times by 30%.
+    `,
     skills: [
-      "JavaScript",
       "React",
-      "Redux",
-      "Node.js",
-      "Typescript",
-      "Express.js",
       "Next.js",
-      "MySql",
-      "Nest.js",
-      "Git",
-      "Docker",
+      "Node.js",
+      "Express.js",
+      "NestJS",
+      "Spring Boot",
+      "JavaScript",
+      "TypeScript",
+      "MySQL",
       "AWS",
-      "HTML",
-      "CSS",
+      "Docker",
+      "Git",
     ],
   },
 ];
@@ -142,23 +145,23 @@ export const education = [
     school: "G H Raisoni College of Engineering, Nagpur",
     date: "June 2015 - May 2019",
     grade: "8.48 CGPA",
-    degree: "Bachelor of Engineering - Mechanical Engineering",
+    degree: "Bachelor of Engineering – Mechanical Engineering",
   },
   {
     id: 2,
     img: "https://upload.wikimedia.org/wikipedia/en/8/82/Jawahar_Navodaya_Vidyalaya_logo.png",
     school: "Jawahar Navodaya Vidyalaya, Nagpur",
     date: "June 2014 - May 2015",
-    grade: "78.80%",
-    degree: "HSC(XII) Central Board of Secondary Education",
+    grade: "78.8%",
+    degree: "HSC (XII) – CBSE Board",
   },
   {
     id: 3,
     img: "https://upload.wikimedia.org/wikipedia/en/8/82/Jawahar_Navodaya_Vidyalaya_logo.png",
     school: "Jawahar Navodaya Vidyalaya, Nagpur",
     date: "June 2012 - May 2013",
-    grade: "9.60 CGPA",
-    degree: "SSC(X) Central Board of Secondary Education",
+    grade: "9.6 CGPA",
+    degree: "SSC (X) – CBSE Board",
   },
 ];
 
@@ -168,8 +171,8 @@ export const projects = [
     title: "GraphQL Weather App",
     date: "Oct 2025",
     description:
-      "Weather dashboard using GraphQL (StepZen/Apollo style setup) to fetch current and forecast data with typed queries. Clean UI with search, location, and condition cards.",
-    tags: ["React", "GraphQL", "Apollo/StepZen"],
+      "A GraphQL-powered weather dashboard using StepZen and Apollo to fetch real-time and forecast data. Built with type-safe queries, responsive cards, and a clean, intuitive UI.",
+    tags: ["React", "GraphQL", "Apollo", "StepZen"],
     category: "web app",
     github: "https://github.com/ragini-pandey/graphql-weather-app",
     webapp: "https://graphql-weather-app.vercel.app",
@@ -181,7 +184,7 @@ export const projects = [
     title: "Telegram Clone",
     date: "Sep 2025",
     description:
-      "A full-stack Telegram clone built with Next.js, Convex, Clerk auth, Stream chat, and TailwindCSS. Real-time messaging, channels, reactions, user presence, and robust auth. Deployed for production-ready performance.",
+      "A full-stack Telegram clone with real-time chat, channels, reactions, and authentication. Built using Next.js, Convex, Clerk, and Stream SDK with Tailwind for UI.",
     tags: ["Next.js", "Convex", "Clerk", "Stream", "TailwindCSS"],
     category: "web app",
     github: "https://github.com/ragini-pandey/telegram-clone",
@@ -194,8 +197,8 @@ export const projects = [
     title: "Spotify Clone",
     date: "May 2024",
     description:
-      "A Spotify Clone built using React JS, Redux, and Material UI. It features a login page where users can sign in with their Spotify account. The app includes a sidebar with navigation to playlists, albums, and top charts. Users can play, pause, and skip songs with a full-featured music player.",
-    tags: ["React Js", "Node JS"],
+      "A Spotify Clone built using React, Redux, and Material UI. It features a login page where users can sign in with their Spotify account. The app includes a sidebar with navigation to playlists, albums, and top charts. Users can play, pause, and skip songs with a full-featured music player.",
+    tags: ["React", "Redux", "Node.js", "Material UI"],
     category: "web app",
     github: "https://github.com/ragini-pandey/spotify-clone",
     webapp: "https://spotify-clone-bice-sigma-58.vercel.app/",
@@ -207,8 +210,8 @@ export const projects = [
     title: "Google Docs Clone",
     date: "Mar 2024",
     description:
-      "Collaborative Google Docs-style editor with rich-text formatting, real-time multiuser editing, and document persistence. Built for smooth UX and low latency.",
-    tags: ["React", "Rich Text", "Realtime"],
+      "Real-time collaborative text editor inspired by Google Docs. Supports multi-user editing, formatting, and live document sync with low latency.",
+    tags: ["React", "Quill", "WebSockets", "Node.js"],
     category: "web app",
     github: "https://github.com/ragini-pandey/google-docs-clone",
     webapp: "https://google-docs-clone-zv83.onrender.com/",
@@ -220,8 +223,8 @@ export const projects = [
     title: "LinkedIn Clone",
     date: "Dec 2023",
     description:
-      "A LinkedIn clone built with React, showcasing a professional networking platform interface. This app features user profiles, posts, and a feed similar to LinkedIn’s, enabling users to explore and interact with content. Integrated with Firebase for backend support and user authentication.",
-    tags: ["React Js", "Redux", "Firebase", "Firestore"],
+      "A social networking platform inspired by LinkedIn with user profiles, posts, feeds, and Firebase authentication. Built with React and Redux.",
+    tags: ["React", "Redux", "Firebase", "Firestore"],
     category: "web app",
     github: "https://github.com/ragini-pandey/linkedin-clone",
     webapp: "https://linkedin-clone-4d2c2.web.app",
@@ -230,11 +233,11 @@ export const projects = [
   },
   {
     id: 5,
-    title: "Whatsapp Clone",
+    title: "WhatsApp Clone",
     date: "Aug 2023",
     description:
-      "A WhatsApp clone made with React JS, Firebase, and Material UI. It has Phone Authentication, Real-time Database. It has a chat room where users can chat with each other. It has a sidebar where users can see all the chat rooms and can create a new chat room. It has a login page where users can log in with their Google account.",
-    tags: ["React Js", "Firebase", "Firestore", "Node JS"],
+      "A WhatsApp clone made with React, Firebase, and Material UI. It has Phone Authentication, Real-time Database. It has a chat room where users can chat with each other. It has a sidebar where users can see all the chat rooms and can create a new chat room. It has a login page where users can log in with their Google account.",
+    tags: ["React", "Firebase", "Firestore", "Node.js"],
     category: "web app",
     github: "https://github.com/ragini-pandey/whatsapp-clone",
     webapp: "https://whatsapp-clone-4d2c2.web.app",
@@ -243,12 +246,12 @@ export const projects = [
   },
 ];
 
-
-
 export const TimeLineData = [
-  { year: 2017, text: "Started my journey" },
-  { year: 2018, text: "Worked as a freelance developer" },
-  { year: 2019, text: "Founded JavaScript Mastery" },
-  { year: 2020, text: "Shared my projects with the world" },
-  { year: 2021, text: "Started my own platform" },
+  { year: 2017, text: "Started my development journey" },
+  { year: 2018, text: "Worked as a freelance web developer" },
+  { year: 2019, text: "Graduated and began professional career" },
+  { year: 2020, text: "Started building personal and open-source projects" },
+  { year: 2021, text: "Completed PG-DAC from C-DAC Pune" },
+  { year: 2022, text: "Joined Wolters Kluwer as a Full Stack Engineer" },
+  { year: 2025, text: "Promoted to Software Engineer II at Procore Technologies" },
 ];
