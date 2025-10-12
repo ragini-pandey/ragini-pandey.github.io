@@ -174,7 +174,7 @@ export const projects = [
     github: "https://github.com/ragini-pandey/graphql-weather-app",
     webapp: "https://graphql-weather-app.vercel.app",
     image:
-      "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/graphql.png?raw=true",
+      "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/graphql-weather-app.png?raw=true",
   },
   {
     id: 1,
@@ -187,7 +187,7 @@ export const projects = [
     github: "https://github.com/ragini-pandey/telegram-clone",
     webapp: "https://telegram-clone-tau.vercel.app",
     image:
-      "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/telegramclone.png?raw=true",
+      "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/telegram-clone.png?raw=true",
   },
   {
     id: 2,
