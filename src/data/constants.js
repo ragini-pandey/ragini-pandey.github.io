@@ -240,7 +240,7 @@ export const projects = [
     tags: ["React", "Firebase", "Firestore", "Node.js"],
     category: "web app",
     github: "https://github.com/ragini-pandey/whatsapp-clone",
-    webapp: "https://whatsapp-clone-4d2c2.web.app",
+    webapp: "https://whatsapp-clone-web.onrender.com",
     image:
       "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/whatsapp-clone.png?raw=true",
   },
