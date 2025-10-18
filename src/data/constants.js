@@ -227,7 +227,7 @@ export const projects = [
     tags: ["React", "Redux", "Firebase", "Firestore"],
     category: "web app",
     github: "https://github.com/ragini-pandey/linkedin-clone",
-    webapp: "https://linkedin-clone-4d2c2.web.app",
+    webapp: "https://linkedin-clone-af258.web.app",
     image:
       "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/linkedIn-clone.png?raw=true",
   },
