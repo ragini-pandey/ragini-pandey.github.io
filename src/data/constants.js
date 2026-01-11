@@ -9,6 +9,7 @@ export const Bio = {
   linkedin: "https://www.linkedin.com/in/ragini-pandey-dev/",
   twitter: "https://twitter.com/pandeyragini24",
   insta: "https://www.instagram.com/pandeyragini2407/",
+  leetcode: "https://leetcode.com/u/ragini-pandey/",
 };
 
 export const skills = [
@@ -194,16 +195,16 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Spotify Clone",
-    date: "May 2024",
+    title: "Pomodoro Timer",
+    date: "December 2025",
     description:
-      "A Spotify Clone built using React, Redux, and Material UI. It features a login page where users can sign in with their Spotify account. The app includes a sidebar with navigation to playlists, albums, and top charts. Users can play, pause, and skip songs with a full-featured music player.",
-    tags: ["React", "Redux", "Node.js", "Material UI"],
+      "A modern Pomodoro timer with customizable settings, dynamic backgrounds and Spotify integration built with React and Vite for a smooth, focused productivity experience",
+    tags: ["React", "JavaScript", "TypeScript", "Vite", "Spotify web api"],
     category: "web app",
-    github: "https://github.com/ragini-pandey/spotify-clone",
-    webapp: "https://spotify-clone-bice-sigma-58.vercel.app/",
+    github: "https://github.com/ragini-pandey/podomoro-timer",
+    webapp: "podomoro-timer-navy.vercel.app/",
     image:
-      "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/spotify-clone.png?raw=true",
+      "https://github.com/ragini-pandey/podomoro-timer/blob/main/public/screenshot2.png?raw=true",
   },
   {
     id: 3,
@@ -243,6 +244,19 @@ export const projects = [
     webapp: "https://whatsapp-clone-web.onrender.com",
     image:
       "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/whatsapp-clone.png?raw=true",
+  },
+  {
+    id: 6,
+    title: "Spotify Clone",
+    date: "May 2024",
+    description:
+      "A Spotify Clone built using React, Redux, and Material UI. It features a login page where users can sign in with their Spotify account. The app includes a sidebar with navigation to playlists, albums, and top charts. Users can play, pause, and skip songs with a full-featured music player.",
+    tags: ["React", "Redux", "Node.js", "Material UI"],
+    category: "web app",
+    github: "https://github.com/ragini-pandey/spotify-clone",
+    webapp: "https://spotify-clone-bice-sigma-58.vercel.app/",
+    image:
+      "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/spotify-clone.png?raw=true",
   },
 ];
 

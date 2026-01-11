@@ -2,6 +2,7 @@ import styled from "styled-components";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import CodeIcon from '@mui/icons-material/Code';
 
 import { Bio } from "../../data/constants";
 
@@ -104,6 +105,9 @@ function Footer() {
           </SocialMediaIcon>
           <SocialMediaIcon href={Bio.insta} target="display">
             <InstagramIcon />
+          </SocialMediaIcon>
+          <SocialMediaIcon href={Bio.leetcode} target="display">
+            <CodeIcon />
           </SocialMediaIcon>
         </SocialMediaIcons>
         {/* <Copyright>
