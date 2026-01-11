@@ -202,7 +202,7 @@ export const projects = [
     tags: ["React", "JavaScript", "TypeScript", "Vite", "Spotify web api"],
     category: "web app",
     github: "https://github.com/ragini-pandey/podomoro-timer",
-    webapp: "podomoro-timer-navy.vercel.app/",
+    webapp: "https://podomoro-timer-navy.vercel.app",
     image:
       "https://github.com/ragini-pandey/podomoro-timer/blob/main/public/screenshot2.png?raw=true",
   },
