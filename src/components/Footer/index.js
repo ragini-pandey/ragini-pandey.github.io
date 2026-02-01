@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import styled from "styled-components";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -5,6 +6,23 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import CodeIcon from '@mui/icons-material/Code';
 
 import { Bio } from "../../data/constants";
+
+const BuyMeCoffeeContainer = styled.div`
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  a {
+    transition: transform 0.2s ease-in-out;
+    &:hover {
+      transform: scale(1.05);
+    }
+    img {
+      height: 45px;
+      width: auto;
+      border-radius: 8px;
+    }
+  }
+`;
 
 const FooterContainer = styled.div`
   width: 100%;
@@ -85,6 +103,26 @@ const Copyright = styled.p`
 `;
 
 function Footer() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js";
+    script.setAttribute("data-name", "bmc-button");
+    script.setAttribute("data-slug", "ragini.pandey");
+    script.setAttribute("data-color", "#FFDD00");
+    script.setAttribute("data-emoji", "☕");
+    script.setAttribute("data-font", "Cookie");
+    script.setAttribute("data-text", "Buy me a coffee");
+    script.setAttribute("data-outline-color", "#000000");
+    script.setAttribute("data-font-color", "#000000");
+    script.setAttribute("data-coffee-color", "#ffffff");
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <FooterContainer>
       <FooterWrapper>
@@ -110,6 +148,18 @@ function Footer() {
             <CodeIcon />
           </SocialMediaIcon>
         </SocialMediaIcons>
+        <BuyMeCoffeeContainer>
+          <a
+            href="https://www.buymeacoffee.com/ragini.pandey"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+              alt="Buy Me A Coffee"
+            />
+          </a>
+        </BuyMeCoffeeContainer>
         {/* <Copyright>
           &copy; {new Date().getFullYear()} Ragini Pandey. All rights reserved
         </Copyright> */}

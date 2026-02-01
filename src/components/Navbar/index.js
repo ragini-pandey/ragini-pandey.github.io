@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useTheme } from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { DiCssdeck } from 'react-icons/di';
@@ -8,6 +8,28 @@ import { FaBars } from 'react-icons/fa';
 import { Bio } from '../../data/constants';
 import { Nav, NavLink, NavbarContainer, Span, NavLogo, NavItems, GitHubButton, ButtonContainer, MobileIcon, MobileMenu, MobileLink } from './NavbarStyledComponent';
 import { SocialMediaIcons, SocialMediaIcon } from './../Footer/index';
+
+const BuyMeCoffeeButton = styled.a`
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+  margin-top: 8px;
+  transition: transform 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+  img {
+    height: 32px;
+    width: auto;
+  }
+  @media (max-width: 768px) {
+    margin: 16px 0 0 0;
+    justify-content: center;
+    img {
+      height: 36px;
+    }
+  }
+`;
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,6 +69,16 @@ const Navbar = () => {
               <LinkedInIcon />
             </SocialMediaIcon>
           </SocialMediaIcons>
+          <BuyMeCoffeeButton 
+            href="https://www.buymeacoffee.com/ragini.pandey" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <img 
+              src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" 
+              alt="Buy Me A Coffee" 
+            />
+          </BuyMeCoffeeButton>
         </ButtonContainer>
         {isOpen && (
           <MobileMenu>
@@ -59,6 +91,16 @@ const Navbar = () => {
                 <LinkedInIcon />
               </SocialMediaIcon>
             </SocialMediaIcons>
+            <BuyMeCoffeeButton 
+              href="https://www.buymeacoffee.com/ragini.pandey" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <img 
+                src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" 
+                alt="Buy Me A Coffee" 
+              />
+            </BuyMeCoffeeButton>
           </MobileMenu>
         )}
       </NavbarContainer>
