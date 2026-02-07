@@ -42,6 +42,7 @@ const Navbar = () => {
       <Component href="#skills" onClick={toggleMenu}>Skills</Component>
       <Component href="#experience" onClick={toggleMenu}>Experience</Component>
       <Component href="#projects" onClick={toggleMenu}>Projects</Component>
+      <Component href="#opensource" onClick={toggleMenu}>Open Source</Component>
       <Component href="#education" onClick={toggleMenu}>Education</Component>
     </>
   );

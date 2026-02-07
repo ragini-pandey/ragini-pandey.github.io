@@ -260,6 +260,49 @@ export const projects = [
   },
 ];
 
+export const openSourceContributions = [
+  {
+    id: 0,
+    org: "freeCodeCamp",
+    orgLogo: "https://avatars.githubusercontent.com/u/9892522?s=200&v=4",
+    owner: "freeCodeCamp",
+    repo: "freeCodeCamp",
+    description:
+      "freeCodeCamp.org's open-source codebase and curriculum. Learn to code for free — used by millions of people worldwide.",
+    tags: ["Markdown", "Curriculum"],
+  },
+  {
+    id: 1,
+    org: "Elastic",
+    orgLogo: "https://avatars.githubusercontent.com/u/6764390?s=200&v=4",
+    owner: "elastic",
+    repo: "eui",
+    description:
+      "Elastic UI Framework — a design library of React components for building consistent UIs at Elastic (Kibana, Elasticsearch).",
+    tags: ["React", "TypeScript", "UI Components"],
+  },
+  {
+    id: 2,
+    org: "Stylelint",
+    orgLogo: "https://avatars.githubusercontent.com/u/10076935?s=200&v=4",
+    owner: "stylelint",
+    repo: "stylelint",
+    description:
+      "A mighty CSS linter that helps you avoid errors and enforce conventions in your stylesheets.",
+    tags: ["JavaScript", "CSS", "Linting"],
+  },
+  {
+    id: 3,
+    org: "Jest",
+    orgLogo: "https://avatars.githubusercontent.com/u/103637210?s=200&v=4",
+    owner: "jestjs",
+    repo: "jest",
+    description:
+      "Delightful JavaScript testing framework with a focus on simplicity. Used by Facebook, Airbnb, and thousands of companies.",
+    tags: ["JavaScript", "Testing", "Node.js"],
+  },
+];
+
 export const TimeLineData = [
   { year: 2017, text: "Started my development journey" },
   { year: 2018, text: "Worked as a freelance web developer" },
