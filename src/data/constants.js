@@ -273,6 +273,16 @@ export const openSourceContributions = [
   },
   {
     id: 1,
+    org: "PostHog",
+    orgLogo: "https://avatars.githubusercontent.com/u/42690565?s=200&v=4",
+    owner: "PostHog",
+    repo: "posthog",
+    description:
+      "PostHog is the open-source product analytics platform. Track user behavior, run feature flags, and more.",
+    tags: ["Python", "TypeScript", "Analytics"],
+  },
+  {
+    id: 2,
     org: "Elastic",
     orgLogo: "https://avatars.githubusercontent.com/u/6764390?s=200&v=4",
     owner: "elastic",
@@ -282,7 +292,7 @@ export const openSourceContributions = [
     tags: ["React", "TypeScript", "UI Components"],
   },
   {
-    id: 2,
+    id: 3,
     org: "Stylelint",
     orgLogo: "https://avatars.githubusercontent.com/u/10076935?s=200&v=4",
     owner: "stylelint",
@@ -292,7 +302,7 @@ export const openSourceContributions = [
     tags: ["JavaScript", "CSS", "Linting"],
   },
   {
-    id: 3,
+    id: 4,
     org: "Jest",
     orgLogo: "https://avatars.githubusercontent.com/u/103637210?s=200&v=4",
     owner: "jestjs",
