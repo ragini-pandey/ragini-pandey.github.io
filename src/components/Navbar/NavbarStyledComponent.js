@@ -63,6 +63,7 @@ export const NavLink = styled.a`
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
+    white-space: nowrap;
     :hover {
       color: ${({ theme }) => theme.primary};
     }
