@@ -43,13 +43,45 @@ const CardContainer = styled.div`
   flex-wrap: wrap;
 `;
 
+const StatsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.text_primary};
+  
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+`;
+
+const StatBadge = styled.div`
+  background: #10b98120;
+  color: #10b981;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+`;
+
 const OpenSource = () => {
   const [prData, setPrData] = useState({});
   const [loading, setLoading] = useState(true);
   const [openModal, setOpenModal] = useState({ state: false, contribution: null });
+  const [totalMergedPRs, setTotalMergedPRs] = useState(0);
 
   useEffect(() => {
     const fetchAllPRs = async () => {
+      try {
+        const res = await fetch("https://api.github.com/search/issues?q=is:pr+is:merged+author:ragini-pandey+-user:ragini-pandey");
+        const data = await res.json();
+        setTotalMergedPRs(data.total_count || 0);
+      } catch (error) {
+        console.error("Failed to fetch total merged PRs:", error);
+      }
+
       const results = {};
       await Promise.all(
         openSourceContributions.map(async (contrib) => {
@@ -116,6 +148,11 @@ const OpenSource = () => {
         <CodeTitle>
           &lt; <span>Open Source Contributions</span> /&gt;
         </CodeTitle>
+        {totalMergedPRs > 0 && (
+          <StatsContainer>
+            Total Merged PRs 👉 <StatBadge>{totalMergedPRs}</StatBadge>
+          </StatsContainer>
+        )}
         <CardContainer>
           {openSourceContributions.map((contribution) => (
             <OpenSourceCard

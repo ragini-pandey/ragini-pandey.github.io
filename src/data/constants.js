@@ -169,6 +169,19 @@ export const education = [
 export const projects = [
   {
     id: 0,
+    title: "Issue Hunter",
+    date: "Feb 2026",
+    description:
+      "A lightweight React app that helps discover fresh, beginner-friendly open source issues on GitHub. Features real-time search, smart filters, repo tracking, auto-refresh, and dark/light theme with responsive design.",
+    tags: ["React", "Vite", "TailwindCSS", "shadcn/ui", "GitHub API"],
+    category: "web app",
+    github: "https://github.com/ragini-pandey/fresh-issues",
+    webapp: "https://fresh-issues.vercel.app",
+    image:
+      "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/fresh-issues.png?raw=true",
+  },
+  {
+    id: 1,
     title: "GraphQL Weather App",
     date: "Oct 2025",
     description:
@@ -181,7 +194,7 @@ export const projects = [
       "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/graphql-weather-app.png?raw=true",
   },
   {
-    id: 1,
+    id: 2,
     title: "Telegram Clone",
     date: "Sep 2025",
     description:
@@ -194,7 +207,7 @@ export const projects = [
       "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/telegram-clone.png?raw=true",
   },
   {
-    id: 2,
+    id: 3,
     title: "Pomodoro Timer",
     date: "December 2025",
     description:
@@ -207,7 +220,7 @@ export const projects = [
       "https://github.com/ragini-pandey/podomoro-timer/blob/main/public/screenshot2.png?raw=true",
   },
   {
-    id: 3,
+    id: 4,
     title: "Google Docs Clone",
     date: "Mar 2024",
     description:
@@ -220,7 +233,7 @@ export const projects = [
       "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/demo.gif?raw=true",
   },
   {
-    id: 4,
+    id: 5,
     title: "LinkedIn Clone",
     date: "Dec 2023",
     description:
@@ -233,7 +246,7 @@ export const projects = [
       "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/linkedIn-clone.png?raw=true",
   },
   {
-    id: 5,
+    id: 6,
     title: "WhatsApp Clone",
     date: "Aug 2023",
     description:
@@ -246,7 +259,7 @@ export const projects = [
       "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/whatsapp-clone.png?raw=true",
   },
   {
-    id: 6,
+    id: 7,
     title: "Spotify Clone",
     date: "May 2024",
     description:
