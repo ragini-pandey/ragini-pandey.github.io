@@ -169,7 +169,7 @@ export const education = [
 export const projects = [
   {
     id: 0,
-    title: "Issue Hunter",
+    title: "Fresh Issues",
     date: "Feb 2026",
     description:
       "A lightweight React app that helps discover fresh, beginner-friendly open source issues on GitHub. Features real-time search, smart filters, repo tracking, auto-refresh, and dark/light theme with responsive design.",
