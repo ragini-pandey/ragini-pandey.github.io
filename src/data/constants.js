@@ -172,7 +172,7 @@ export const projects = [
     title: "Fresh Issues",
     date: "Feb 2026",
     description:
-      "A lightweight React app that helps discover fresh, beginner-friendly open source issues on GitHub. Features real-time search, smart filters, repo tracking, auto-refresh, and dark/light theme with responsive design.",
+      "A React app that helps discover fresh, beginner-friendly open source issues on GitHub. Features real-time search, smart filters, repo tracking, auto-refresh, and dark/light theme with responsive design.",
     tags: ["React", "Vite", "TailwindCSS", "shadcn/ui", "GitHub API"],
     category: "web app",
     github: "https://github.com/ragini-pandey/fresh-issues",
