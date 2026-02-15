@@ -10,6 +10,8 @@ export const Bio = {
   twitter: "https://twitter.com/pandeyragini24",
   insta: "https://www.instagram.com/pandeyragini2407/",
   leetcode: "https://leetcode.com/u/ragini-pandey/",
+  buyMeACoffee: "https://www.buymeacoffee.com/ragini.pandey",
+  buyMeAChai: "https://buymeachai.ezee.li/ragini_pandey",
 };
 
 export const skills = [

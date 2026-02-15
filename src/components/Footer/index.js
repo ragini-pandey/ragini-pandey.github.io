@@ -150,13 +150,25 @@ function Footer() {
         </SocialMediaIcons>
         <BuyMeCoffeeContainer>
           <a
-            href="https://www.buymeacoffee.com/ragini.pandey"
+            href={Bio.buyMeACoffee}
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
               src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
               alt="Buy Me A Coffee"
+            />
+          </a>
+        </BuyMeCoffeeContainer>
+        <BuyMeCoffeeContainer>
+          <a
+            href={Bio.buyMeAChai}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://buymeachai.ezee.li/assets/images/buymeachai-button.png"
+              alt="Buy Me A Chai"
             />
           </a>
         </BuyMeCoffeeContainer>
