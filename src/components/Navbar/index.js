@@ -28,10 +28,8 @@ const Navbar = () => {
   return (
     <Nav>
       <NavbarContainer>
-        <NavLogo to="/">
-          <a href="#" style={{ display: "flex", alignItems: "center", color: "white", cursor: 'pointer' }}>
-            <DiCssdeck size="3rem" /> <Span>Portfolio</Span>
-          </a>
+        <NavLogo to="/" style={{ display: "flex", alignItems: "center", color: "white", cursor: 'pointer' }}>
+          <DiCssdeck size="3rem" /> <Span>Portfolio</Span>
         </NavLogo>
         <MobileIcon onClick={toggleMenu}>
           <FaBars />
