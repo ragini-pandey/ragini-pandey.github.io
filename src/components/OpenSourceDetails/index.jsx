@@ -1,6 +1,7 @@
 import { CloseRounded } from "@mui/icons-material";
 import { Modal } from "@mui/material";
 import styled from "styled-components";
+import LazyImage from '../LazyImage';
 
 const Container = styled.div`
   width: 100%;
@@ -37,7 +38,7 @@ const Header = styled.div`
   margin-bottom: 8px;
 `;
 
-const OrgLogo = styled.img`
+const OrgLogo = styled(LazyImage)`
   width: 56px;
   height: 56px;
   border-radius: 12px;

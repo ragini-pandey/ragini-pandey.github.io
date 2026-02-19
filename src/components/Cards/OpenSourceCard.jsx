@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import LazyImage from '../LazyImage';
 
 const Card = styled.div`
   width: 380px;
@@ -31,7 +32,7 @@ const Top = styled.div`
   gap: 14px;
 `;
 
-const OrgLogo = styled.img`
+const OrgLogo = styled(LazyImage)`
   width: 48px;
   height: 48px;
   border-radius: 10px;

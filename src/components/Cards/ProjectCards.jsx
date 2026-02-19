@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import LazyImage from '../LazyImage';
 
 const Button = styled.button`
   display: none;
@@ -37,7 +38,7 @@ const Card = styled.div`
   }
 `;
 
-const Image = styled.img`
+const Image = styled(LazyImage)`
   width: 100%;
   height: 180px;
   background-color: ${({ theme }) => theme.white};
@@ -112,7 +113,7 @@ const Members = styled.div`
   padding-left: 10px;
 `;
 
-const Avatar = styled.img`
+const Avatar = styled(LazyImage)`
   width: 38px;
   height: 38px;
   border-radius: 50%;

@@ -1,6 +1,7 @@
 import { CloseRounded, GitHub, LinkedIn } from '@mui/icons-material';
 import { Modal } from '@mui/material';
 import styled from 'styled-components'
+import LazyImage from '../LazyImage';
 
 const Container = styled.div`
 width: 100%;
@@ -64,7 +65,7 @@ const Desc = styled.div`
     }
 `;
 
-const Image = styled.img`
+const Image = styled(LazyImage)`
     width: 100%;
     object-fit: cover;
     border-radius: 12px;
@@ -122,7 +123,7 @@ const Member = styled.div`
     gap: 12px;
 `;
 
-const MemberImage = styled.img`
+const MemberImage = styled(LazyImage)`
     width: 50px;
     height: 50px;
     object-fit: cover;

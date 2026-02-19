@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { CodeTitle } from '../Experience';
 import { skills } from '../../data/constants';
+import LazyImage from '../LazyImage';
 
 const getYearsAndMonthsSinceJoining = () => {
   const joinDate = new Date('2022-06-01');
@@ -141,7 +142,7 @@ const SkillItem = styled.div`
   }
 `;
 
-const SkillImage = styled.img`
+const SkillImage = styled(LazyImage)`
   width: 24px;
   height: 24px;
 `;

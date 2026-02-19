@@ -2,6 +2,7 @@ import HeroBgAnimation from '../HeroBgAnimation'
 import { HeroContainer, HeroBg, HeroLeftContainer, Img, HeroRightContainer, HeroInnerContainer, TextLoop, Title, Span, SubTitle,SocialMediaIcons,SocialMediaIcon, ResumeButton } from './HeroStyle'
 import Typewriter from 'typewriter-effect';
 import { Bio } from '../../data/constants';
+import LazyImage from '../LazyImage';
 
 const HeroSection = () => {
 
@@ -34,7 +35,7 @@ const HeroSection = () => {
                     </HeroLeftContainer>
 
                     <HeroRightContainer id="Right">
-                        <Img src={`${process.env.PUBLIC_URL}/${randomImage}`} alt="Ragini Pandey img" />
+                        <Img as={LazyImage} src={`${process.env.PUBLIC_URL}/${randomImage}`} alt="Ragini Pandey img" />
                     </HeroRightContainer>
                 </HeroInnerContainer>
             </HeroContainer>
