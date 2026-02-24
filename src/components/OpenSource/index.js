@@ -6,12 +6,6 @@ import OpenSourceDetails from "../OpenSourceDetails";
 import { CodeTitle } from "../Experience";
 import githubData from "../../data/githubData.json";
 
-const OpenSource = () => {
-  const [openModal, setOpenModal] = useState({ state: false, contribution: null });
-  const { totalMergedPRs, prData } = githubData;
-
-  return (
-
 const Container = styled.div`
   display: flex;
   flex-direction: column;
