@@ -7,6 +7,14 @@ import { CodeTitle } from "../Experience";
 
 const GITHUB_USERNAME = "ragini-pandey";
 
+const githubFetch = (url) => {
+  const token = process.env.REACT_APP_GITHUB_TOKEN;
+  const headers = token
+    ? { Authorization: `Bearer ${token}` }
+    : {};
+  return fetch(url, { headers });
+};
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -75,7 +83,7 @@ const OpenSource = () => {
   useEffect(() => {
     const fetchAllPRs = async () => {
       try {
-        const res = await fetch("https://api.github.com/search/issues?q=is:pr+is:merged+author:ragini-pandey+-user:ragini-pandey");
+        const res = await githubFetch("https://api.github.com/search/issues?q=is:pr+is:merged+author:ragini-pandey+-user:ragini-pandey");
         const data = await res.json();
         setTotalMergedPRs(data.total_count || 0);
       } catch (error) {
@@ -89,10 +97,10 @@ const OpenSource = () => {
           try {
             // Fetch both open and closed PRs by this user
             const [openRes, closedRes] = await Promise.all([
-              fetch(
+              githubFetch(
                 `https://api.github.com/search/issues?q=type:pr+author:${GITHUB_USERNAME}+repo:${owner}/${repo}+state:open&per_page=100`
               ),
-              fetch(
+              githubFetch(
                 `https://api.github.com/search/issues?q=type:pr+author:${GITHUB_USERNAME}+repo:${owner}/${repo}+state:closed&per_page=100`
               ),
             ]);
