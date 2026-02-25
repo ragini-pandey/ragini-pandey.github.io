@@ -126,7 +126,7 @@ const Avatar = styled(LazyImage)`
 const ProjectCards = ({ project, setOpenModal }) => {
   return (
     <Card onClick={() => setOpenModal({ state: true, project: project })}>
-      <Image src={project.image} />
+      <Image src={project.image} alt={project.title} />
       <Tags>
         {project.tags?.map((tag) => (
           <Tag key={tag}>{tag}</Tag>
@@ -139,7 +139,7 @@ const ProjectCards = ({ project, setOpenModal }) => {
       </Details>
       <Members>
         {project.member?.map((member) => (
-          <Avatar src={member.img} />
+          <Avatar src={member.img} alt={member.name} />
         ))}
       </Members>
       {/* <Button>View Project</Button> */}

@@ -145,7 +145,7 @@ const ExperienceCard = ({ experience }) => {
   return (
     <Card>
       <Top>
-        <Image src={experience.img} />
+        <Image src={experience.img} alt={experience.company} />
         <Body>
           <Role>{experience.role}</Role>
           <Company>{experience.company}</Company>
@@ -171,8 +171,8 @@ const ExperienceCard = ({ experience }) => {
         )}
       </Description>
       {experience.doc && (
-        <a href={experience.doc} target="new">
-          <Document src={experience.doc} />
+        <a href={experience.doc} target="new" aria-label={`View ${experience.company} document`}>
+          <Document src={experience.doc} alt={`${experience.company} document`} />
         </a>
       )}
     </Card>

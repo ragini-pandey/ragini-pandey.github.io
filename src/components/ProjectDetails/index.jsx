@@ -197,7 +197,7 @@ const index = ({ openModal, setOpenModal }) => {
                         }}
                         onClick={() => setOpenModal({ state: false, project: null })}
                     />
-                    <Image src={project?.image} />
+                    <Image src={project?.image} alt={project?.title} />
                     <Title>{project?.title}</Title>
                     <Date>{project.date}</Date>
                     <Tags>
@@ -212,12 +212,12 @@ const index = ({ openModal, setOpenModal }) => {
                             <Members>
                                 {project?.member.map((member) => (
                                     <Member>
-                                        <MemberImage src={member.img} />
+                                        <MemberImage src={member.img} alt={member.name} />
                                         <MemberName>{member.name}</MemberName>
-                                        <a href={member.github} target="new" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                        <a href={member.github} target="new" aria-label={`${member.name}'s GitHub profile`} style={{ textDecoration: 'none', color: 'inherit' }}>
                                             <GitHub />
                                         </a>
-                                        <a href={member.linkedin} target="new" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                        <a href={member.linkedin} target="new" aria-label={`${member.name}'s LinkedIn profile`} style={{ textDecoration: 'none', color: 'inherit' }}>
                                             <LinkedIn />
                                         </a>
                                     </Member>
