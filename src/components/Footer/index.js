@@ -135,16 +135,16 @@ function Footer() {
           <NavLink href="#education">Education</NavLink>
         </Nav> */}
         <SocialMediaIcons>
-          <SocialMediaIcon href={Bio.twitter} target="display">
+          <SocialMediaIcon href={Bio.twitter} target="display" aria-label="Twitter Profile">
             <TwitterIcon />
           </SocialMediaIcon>
-          <SocialMediaIcon href={Bio.linkedin} target="display">
+          <SocialMediaIcon href={Bio.linkedin} target="display" aria-label="LinkedIn Profile">
             <LinkedInIcon />
           </SocialMediaIcon>
-          <SocialMediaIcon href={Bio.insta} target="display">
+          <SocialMediaIcon href={Bio.insta} target="display" aria-label="Instagram Profile">
             <InstagramIcon />
           </SocialMediaIcon>
-          <SocialMediaIcon href={Bio.leetcode} target="display">
+          <SocialMediaIcon href={Bio.leetcode} target="display" aria-label="LeetCode Profile">
             <CodeIcon />
           </SocialMediaIcon>
         </SocialMediaIcons>

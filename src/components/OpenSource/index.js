@@ -1,10 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { openSourceContributions } from "../../data/constants";
 import OpenSourceCard from "../Cards/OpenSourceCard";
 import OpenSourceDetails from "../OpenSourceDetails";
 import { CodeTitle } from "../Experience";
-import githubData from "../../data/githubData.json";
+
+const GITHUB_USERNAME = "ragini-pandey";
+
+const githubFetch = (url) => {
+  return fetch(url);
+};
 
 const Container = styled.div`
   display: flex;
@@ -66,8 +71,80 @@ const StatBadge = styled.div`
 `;
 
 const OpenSource = () => {
+  const [prData, setPrData] = useState({});
+  const [loading, setLoading] = useState(true);
   const [openModal, setOpenModal] = useState({ state: false, contribution: null });
-  const { totalMergedPRs, prData } = githubData;
+  const [totalMergedPRs, setTotalMergedPRs] = useState(0);
+
+  useEffect(() => {
+    const fetchAllPRs = async () => {
+      try {
+        const res = await githubFetch("https://api.github.com/search/issues?q=is:pr+is:merged+author:ragini-pandey+-user:ragini-pandey");
+        const data = await res.json();
+        setTotalMergedPRs(data.total_count || 0);
+      } catch (error) {
+        console.error("Failed to fetch total merged PRs:", error);
+      }
+
+      const results = {};
+      await Promise.all(
+        openSourceContributions.map(async (contrib) => {
+          const { owner, repo, id } = contrib;
+          try {
+            // Fetch both open and closed PRs by this user
+            const [openRes, closedRes] = await Promise.all([
+              githubFetch(
+                `https://api.github.com/search/issues?q=type:pr+author:${GITHUB_USERNAME}+repo:${owner}/${repo}+state:open&per_page=100`
+              ),
+              githubFetch(
+                `https://api.github.com/search/issues?q=type:pr+author:${GITHUB_USERNAME}+repo:${owner}/${repo}+state:closed&per_page=100`
+              ),
+            ]);
+            const openData = await openRes.json();
+            const closedData = await closedRes.json();
+
+            const openPRs = (openData.items || []).map((pr) => ({
+              title: pr.title,
+              number: pr.number,
+              link: pr.html_url,
+              status: "Open",
+              createdAt: pr.created_at,
+              labels: pr.labels?.map((l) => l.name) || [],
+            }));
+
+            const closedPRs = (closedData.items || [])
+              .filter((pr) => pr.pull_request?.merged_at)
+              .map((pr) => ({
+                title: pr.title,
+                number: pr.number,
+                link: pr.html_url,
+                status: "Merged",
+                createdAt: pr.created_at,
+                mergedAt: pr.pull_request?.merged_at,
+                labels: pr.labels?.map((l) => l.name) || [],
+              }));
+
+            const allPRs = [...openPRs, ...closedPRs].sort(
+              (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+            );
+
+            results[id] = {
+              prs: allPRs,
+              total: allPRs.length,
+              merged: allPRs.filter((p) => p.status === "Merged").length,
+              open: allPRs.filter((p) => p.status === "Open").length,
+            };
+          } catch {
+            results[id] = { prs: [], total: 0, merged: 0, open: 0 };
+          }
+        })
+      );
+      setPrData(results);
+      setLoading(false);
+    };
+
+    fetchAllPRs();
+  }, []);
 
   return (
     <Container id="opensource">
@@ -86,7 +163,7 @@ const OpenSource = () => {
               key={contribution.id}
               contribution={contribution}
               stats={prData[contribution.id]}
-              loading={false}
+              loading={loading}
               onClick={() =>
                 setOpenModal({ state: true, contribution: { ...contribution, ...prData[contribution.id] } })
               }

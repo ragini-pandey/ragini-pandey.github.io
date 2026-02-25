@@ -39,10 +39,10 @@ const Navbar = () => {
         </NavItems>
         <ButtonContainer>
           <SocialMediaIcons>
-            <SocialMediaIcon href={Bio.github} target="display">
+            <SocialMediaIcon href={Bio.github} target="display" aria-label="GitHub Profile">
               <GitHubIcon />
             </SocialMediaIcon>
-            <SocialMediaIcon href={Bio.linkedin} target="display">
+            <SocialMediaIcon href={Bio.linkedin} target="display" aria-label="LinkedIn Profile">
               <LinkedInIcon />
             </SocialMediaIcon>
           </SocialMediaIcons>
@@ -51,10 +51,10 @@ const Navbar = () => {
           <MobileMenu>
             {renderNavLinks(MobileLink)}
             <SocialMediaIcons>
-              <SocialMediaIcon href={Bio.github} target="display">
+              <SocialMediaIcon href={Bio.github} target="display" aria-label="GitHub Profile">
                 <GitHubIcon />
               </SocialMediaIcon>
-              <SocialMediaIcon href={Bio.linkedin} target="display">
+              <SocialMediaIcon href={Bio.linkedin} target="display" aria-label="LinkedIn Profile">
                 <LinkedInIcon />
               </SocialMediaIcon>
             </SocialMediaIcons>
