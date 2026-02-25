@@ -6,9 +6,69 @@ import OpenSourceDetails from "../OpenSourceDetails";
 import { CodeTitle } from "../Experience";
 
 const GITHUB_USERNAME = "ragini-pandey";
+const GITHUB_GRAPHQL_URL = "https://api.github.com/graphql";
+const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
 
-const githubFetch = (url) => {
-  return fetch(url);
+const githubGraphQL = (query) =>
+  fetch(GITHUB_GRAPHQL_URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${GITHUB_TOKEN}`,
+    },
+    body: JSON.stringify({ query }),
+  }).then((res) => res.json());
+
+const buildBatchedQuery = (contributions) => {
+  const repoFields = contributions
+    .map(
+      ({ id, owner, repo }) => `
+    openPRs_${id}: search(
+      query: "is:pr is:open author:${GITHUB_USERNAME} repo:${owner}/${repo}"
+      type: ISSUE
+      first: 100
+    ) {
+      nodes {
+        ... on PullRequest {
+          title
+          number
+          url
+          createdAt
+          labels(first: 10) { nodes { name } }
+        }
+      }
+    }
+    mergedPRs_${id}: search(
+      query: "is:pr is:merged author:${GITHUB_USERNAME} repo:${owner}/${repo}"
+      type: ISSUE
+      first: 100
+    ) {
+      nodes {
+        ... on PullRequest {
+          title
+          number
+          url
+          createdAt
+          mergedAt
+          labels(first: 10) { nodes { name } }
+        }
+      }
+    }`
+    )
+    .join("\n");
+
+  return `
+    query GetOpenSourceContributions {
+      totalMergedPRs: search(
+        query: "is:pr is:merged author:${GITHUB_USERNAME} -user:${GITHUB_USERNAME}"
+        type: ISSUE
+        first: 1
+      ) {
+        issueCount
+      }
+      ${repoFields}
+    }
+  `;
 };
 
 const Container = styled.div`
@@ -79,68 +139,62 @@ const OpenSource = () => {
   useEffect(() => {
     const fetchAllPRs = async () => {
       try {
-        const res = await githubFetch("https://api.github.com/search/issues?q=is:pr+is:merged+author:ragini-pandey+-user:ragini-pandey");
-        const data = await res.json();
-        setTotalMergedPRs(data.total_count || 0);
+        const query = buildBatchedQuery(openSourceContributions);
+        const { data, errors } = await githubGraphQL(query);
+
+        if (errors) {
+          console.error("GraphQL errors:", errors);
+        }
+
+        setTotalMergedPRs(data?.totalMergedPRs?.issueCount || 0);
+
+        const results = {};
+        openSourceContributions.forEach(({ id }) => {
+          const openNodes = data?.[`openPRs_${id}`]?.nodes || [];
+          const mergedNodes = data?.[`mergedPRs_${id}`]?.nodes || [];
+
+          const openPRs = openNodes.map((pr) => ({
+            title: pr.title,
+            number: pr.number,
+            link: pr.url,
+            status: "Open",
+            createdAt: pr.createdAt,
+            labels: pr.labels?.nodes?.map((l) => l.name) || [],
+          }));
+
+          const mergedPRs = mergedNodes.map((pr) => ({
+            title: pr.title,
+            number: pr.number,
+            link: pr.url,
+            status: "Merged",
+            createdAt: pr.createdAt,
+            mergedAt: pr.mergedAt,
+            labels: pr.labels?.nodes?.map((l) => l.name) || [],
+          }));
+
+          const allPRs = [...openPRs, ...mergedPRs].sort(
+            (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+          );
+
+          results[id] = {
+            prs: allPRs,
+            total: allPRs.length,
+            merged: mergedPRs.length,
+            open: openPRs.length,
+          };
+        });
+
+        setPrData(results);
       } catch (error) {
-        console.error("Failed to fetch total merged PRs:", error);
+        console.error("GraphQL fetch failed:", error);
+        const results = {};
+        openSourceContributions.forEach(({ id }) => {
+          results[id] = { prs: [], total: 0, merged: 0, open: 0 };
+        });
+        setPrData(results);
+      } finally {
+        setLoading(false);
       }
-
-      const results = {};
-      await Promise.all(
-        openSourceContributions.map(async (contrib) => {
-          const { owner, repo, id } = contrib;
-          try {
-            // Fetch both open and closed PRs by this user
-            const [openRes, closedRes] = await Promise.all([
-              githubFetch(
-                `https://api.github.com/search/issues?q=type:pr+author:${GITHUB_USERNAME}+repo:${owner}/${repo}+state:open&per_page=100`
-              ),
-              githubFetch(
-                `https://api.github.com/search/issues?q=type:pr+author:${GITHUB_USERNAME}+repo:${owner}/${repo}+state:closed&per_page=100`
-              ),
-            ]);
-            const openData = await openRes.json();
-            const closedData = await closedRes.json();
-
-            const openPRs = (openData.items || []).map((pr) => ({
-              title: pr.title,
-              number: pr.number,
-              link: pr.html_url,
-              status: "Open",
-              createdAt: pr.created_at,
-              labels: pr.labels?.map((l) => l.name) || [],
-            }));
-
-            const closedPRs = (closedData.items || [])
-              .filter((pr) => pr.pull_request?.merged_at)
-              .map((pr) => ({
-                title: pr.title,
-                number: pr.number,
-                link: pr.html_url,
-                status: "Merged",
-                createdAt: pr.created_at,
-                mergedAt: pr.pull_request?.merged_at,
-                labels: pr.labels?.map((l) => l.name) || [],
-              }));
-
-            const allPRs = [...openPRs, ...closedPRs].sort(
-              (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
-            );
-
-            results[id] = {
-              prs: allPRs,
-              total: allPRs.length,
-              merged: allPRs.filter((p) => p.status === "Merged").length,
-              open: allPRs.filter((p) => p.status === "Open").length,
-            };
-          } catch {
-            results[id] = { prs: [], total: 0, merged: 0, open: 0 };
-          }
-        })
-      );
-      setPrData(results);
-      setLoading(false);
     };
 
     fetchAllPRs();
