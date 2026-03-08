@@ -286,16 +286,16 @@ export const openSourceContributions = [
       "freeCodeCamp.org's open-source codebase and curriculum. Learn to code for free — used by millions of people worldwide.",
     tags: ["Markdown", "Curriculum"],
   },
-  {
-    id: 1,
-    org: "PostHog",
-    orgLogo: "https://avatars.githubusercontent.com/u/42690565?s=200&v=4",
-    owner: "PostHog",
-    repo: "posthog",
-    description:
-      "PostHog is the open-source product analytics platform. Track user behavior, run feature flags, and more.",
-    tags: ["Python", "TypeScript", "Analytics"],
-  },
+  // {
+  //   id: 1,
+  //   org: "PostHog",
+  //   orgLogo: "https://avatars.githubusercontent.com/u/42690565?s=200&v=4",
+  //   owner: "PostHog",
+  //   repo: "posthog",
+  //   description:
+  //     "PostHog is the open-source product analytics platform. Track user behavior, run feature flags, and more.",
+  //   tags: ["Python", "TypeScript", "Analytics"],
+  // },
   {
     id: 2,
     org: "Elastic",
@@ -316,16 +316,26 @@ export const openSourceContributions = [
       "A mighty CSS linter that helps you avoid errors and enforce conventions in your stylesheets.",
     tags: ["JavaScript", "CSS", "Linting"],
   },
+  // {
+  //   id: 4,
+  //   org: "Jest",
+  //   orgLogo: "https://avatars.githubusercontent.com/u/103637210?s=200&v=4",
+  //   owner: "jestjs",
+  //   repo: "jest",
+  //   description:
+  //     "Delightful JavaScript testing framework with a focus on simplicity. Used by Facebook, Airbnb, and thousands of companies.",
+  //   tags: ["JavaScript", "Testing", "Node.js"],
+  // },
   {
-    id: 4,
-    org: "Jest",
-    orgLogo: "https://avatars.githubusercontent.com/u/103637210?s=200&v=4",
-    owner: "jestjs",
-    repo: "jest",
+    id: 5,
+    org: "PocketPaw",
+    orgLogo: "https://avatars.githubusercontent.com/u/258914777?s=200&v=4",
+    owner: "pocketpaw",
+    repo: "pocketpaw",
     description:
-      "Delightful JavaScript testing framework with a focus on simplicity. Used by Facebook, Airbnb, and thousands of companies.",
-    tags: ["JavaScript", "Testing", "Node.js"],
-  },
+      "Self-hosted, open-source AI agent with desktop installer, multi-agent Command Center, and 7-layer security. Works with Anthropic, OpenAI, or Ollama.",
+    tags: ["JavaScript", "Python", "AI Agents"],
+  },  
 ];
 
 export const TimeLineData = [
