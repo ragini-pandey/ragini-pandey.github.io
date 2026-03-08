@@ -84,9 +84,11 @@ export const experiences = [
       "Procore is a global SaaS platform for construction management, connecting project teams and streamlining workflows across planning, design, and execution.",
     projectRole: "Full Stack Developer",
     desc: `
-      • Building and maintaining scalable micro frontends and shared UI components using React, TypeScript, and Zustand.
-      • Modernizing legacy modules from monolith to modular architecture for better performance and maintainability.
-      • Collaborating with backend teams to integrate REST APIs and enhance data-driven dashboards.
+      • Built real-time messaging with Centrifugo + WebSockets (auth, permissions, presence, reconnect, state sync), supporting 100+ concurrent sessions.
+      • Led UI performance and accessibility improvements, achieving 30% gains in render and interaction performance (profiling, memoization, virtualization, and a11y fixes).
+      • Architected infinite scrolling for a MUI-based file navigation tree, reducing initial load time by 45% and scaling to 10,000+ files.
+      • Owned BIM Models UI and Model Manager micro-frontends from API integration to UI state management and production support, shipping features end-to-end.
+      • Integrated Procore Backend with NovoRender to render and manage existing BIM models in the 3D viewer, ensuring smooth navigation, reliable state sync, and real-time collaboration flows.
     `,
     skills: [
       "React",
@@ -112,9 +114,12 @@ export const experiences = [
       "Global provider of professional information, software solutions, and services for clinicians, accountants, lawyers, and tax, finance, audit, risk, compliance, and regulatory sectors.",
     projectRole: "Full Stack Developer",
     desc: `
-      • Developed and maintained enterprise tools like CCH IQ Workbench and Profile Manager using React, Next.js, and Node.js.
-      • Designed RESTful and GraphQL APIs with NestJS and Java Spring Boot.
-      • Streamlined CI/CD pipelines and optimized front-end performance, improving load times by 30%.
+      • Implemented page filters, client matching criteria, and reporting definition flows, integrating microservices via REST APIs to support scalable feature delivery.
+      • Crafted reusable, modular UI components and improved client-side routing, reducing application load time by 3 seconds.
+      • Engineered a custom rich text editor for document management using React Quill, streamlined document workflows and increasing user engagement by 60%.
+      • Created and supported APIs for events, document management, client matching, and reporting definitions, achieving 99.9% uptime across services.
+      • Implemented real-time chat using Socket.IO with Node.js, supporting 1,000+ simultaneous users with stable message delivery and presence updates.
+      • Designed and maintained mobile-responsive, data-driven pages focused on performance and usability using CSS Grid and Flexbox.
     `,
     skills: [
       "React",
