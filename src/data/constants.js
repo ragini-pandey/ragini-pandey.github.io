@@ -234,32 +234,32 @@ export const projects = [
     image:
       "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/demo.gif?raw=true",
   },
-  {
-    id: 5,
-    title: "LinkedIn Clone",
-    date: "Dec 2023",
-    description:
-      "A social networking platform inspired by LinkedIn with user profiles, posts, feeds, and Firebase authentication. Built with React and Redux.",
-    tags: ["React", "Redux", "Firebase", "Firestore"],
-    category: "web app",
-    github: "https://github.com/ragini-pandey/linkedin-clone",
-    webapp: "https://linkedin-clone-af258.web.app",
-    image:
-      "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/linkedIn-clone.png?raw=true",
-  },
-  {
-    id: 6,
-    title: "WhatsApp Clone",
-    date: "Aug 2023",
-    description:
-      "A WhatsApp clone made with React, Firebase, and Material UI. It has Phone Authentication, Real-time Database. It has a chat room where users can chat with each other. It has a sidebar where users can see all the chat rooms and can create a new chat room. It has a login page where users can log in with their Google account.",
-    tags: ["React", "Firebase", "Firestore", "Node.js"],
-    category: "web app",
-    github: "https://github.com/ragini-pandey/whatsapp-clone",
-    webapp: "https://whatsapp-clone-web.onrender.com",
-    image:
-      "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/whatsapp-clone.png?raw=true",
-  },
+  // {
+  //   id: 5,
+  //   title: "LinkedIn Clone",
+  //   date: "Dec 2023",
+  //   description:
+  //     "A social networking platform inspired by LinkedIn with user profiles, posts, feeds, and Firebase authentication. Built with React and Redux.",
+  //   tags: ["React", "Redux", "Firebase", "Firestore"],
+  //   category: "web app",
+  //   github: "https://github.com/ragini-pandey/linkedin-clone",
+  //   webapp: "https://linkedin-clone-af258.web.app",
+  //   image:
+  //     "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/linkedIn-clone.png?raw=true",
+  // },
+  // {
+  //   id: 6,
+  //   title: "WhatsApp Clone",
+  //   date: "Aug 2023",
+  //   description:
+  //     "A WhatsApp clone made with React, Firebase, and Material UI. It has Phone Authentication, Real-time Database. It has a chat room where users can chat with each other. It has a sidebar where users can see all the chat rooms and can create a new chat room. It has a login page where users can log in with their Google account.",
+  //   tags: ["React", "Firebase", "Firestore", "Node.js"],
+  //   category: "web app",
+  //   github: "https://github.com/ragini-pandey/whatsapp-clone",
+  //   webapp: "https://whatsapp-clone-web.onrender.com",
+  //   image:
+  //     "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/whatsapp-clone.png?raw=true",
+  // },
   {
     id: 7,
     title: "Spotify Clone",
