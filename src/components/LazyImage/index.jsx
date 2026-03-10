@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 
 const LazyImage = ({ src, alt, className, style, ...props }) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -7,6 +7,8 @@ const LazyImage = ({ src, alt, className, style, ...props }) => {
 
   useEffect(() => {
     const imgElement = imgRef.current;
+    if (!imgElement) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -17,27 +19,25 @@ const LazyImage = ({ src, alt, className, style, ...props }) => {
         });
       },
       {
-        rootMargin: '50px', // Start loading 50px before the image comes into view
+        rootMargin: '200px', // Start loading 200px before the image enters the viewport
       }
     );
 
-    if (imgElement) {
-      observer.observe(imgElement);
-    }
+    observer.observe(imgElement);
 
     return () => {
-      if (imgElement) {
-        observer.unobserve(imgElement);
-      }
+      observer.disconnect();
     };
   }, []);
 
-  // Handle cached images: if src is set and image is already complete, mark as loaded
-  useEffect(() => {
+  // useLayoutEffect runs synchronously after DOM commits, before the browser paints.
+  // This reliably catches cached images where onLoad may never fire because the
+  // browser resolves the image from cache before React can attach the event handler.
+  useLayoutEffect(() => {
     if (isInView && imgRef.current?.complete) {
       setIsLoaded(true);
     }
-  }, [isInView]);
+  }, [isInView, src]);
 
   return (
     <img
@@ -45,6 +45,8 @@ const LazyImage = ({ src, alt, className, style, ...props }) => {
       src={isInView ? src : undefined}
       alt={alt}
       className={className}
+      loading="lazy"
+      decoding="async"
       style={{
         ...style,
         opacity: isLoaded ? 1 : 0,
