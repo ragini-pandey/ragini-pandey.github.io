@@ -32,6 +32,13 @@ const LazyImage = ({ src, alt, className, style, ...props }) => {
     };
   }, []);
 
+  // Handle cached images: if src is set and image is already complete, mark as loaded
+  useEffect(() => {
+    if (isInView && imgRef.current?.complete) {
+      setIsLoaded(true);
+    }
+  }, [isInView]);
+
   return (
     <img
       ref={imgRef}
@@ -44,6 +51,7 @@ const LazyImage = ({ src, alt, className, style, ...props }) => {
         transition: 'opacity 0.3s ease-in-out',
       }}
       onLoad={() => setIsLoaded(true)}
+      onError={() => setIsLoaded(true)}
       {...props}
     />
   );

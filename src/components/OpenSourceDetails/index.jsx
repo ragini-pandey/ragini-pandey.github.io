@@ -140,6 +140,19 @@ const PRList = styled.div`
   flex-direction: column;
   gap: 10px;
   margin-bottom: 16px;
+  max-height: 420px;
+  overflow-y: auto;
+  padding-right: 4px;
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.text_secondary + 40};
+    border-radius: 10px;
+  }
 `;
 
 const PRItem = styled.a`
