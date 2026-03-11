@@ -1,75 +1,10 @@
-import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { openSourceContributions } from "../../data/constants";
 import OpenSourceCard from "../Cards/OpenSourceCard";
 import OpenSourceDetails from "../OpenSourceDetails";
 import { CodeTitle } from "../Experience";
-
-const GITHUB_USERNAME = "ragini-pandey";
-const GITHUB_GRAPHQL_URL = "https://api.github.com/graphql";
-const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
-
-const githubGraphQL = (query) =>
-  fetch(GITHUB_GRAPHQL_URL, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${GITHUB_TOKEN}`,
-    },
-    body: JSON.stringify({ query }),
-  }).then((res) => res.json());
-
-const buildBatchedQuery = (contributions) => {
-  const repoFields = contributions
-    .map(
-      ({ id, owner, repo }) => `
-    openPRs_${id}: search(
-      query: "is:pr is:open author:${GITHUB_USERNAME} repo:${owner}/${repo}"
-      type: ISSUE
-      first: 100
-    ) {
-      nodes {
-        ... on PullRequest {
-          title
-          number
-          url
-          createdAt
-          labels(first: 10) { nodes { name } }
-        }
-      }
-    }
-    mergedPRs_${id}: search(
-      query: "is:pr is:merged author:${GITHUB_USERNAME} repo:${owner}/${repo}"
-      type: ISSUE
-      first: 100
-    ) {
-      nodes {
-        ... on PullRequest {
-          title
-          number
-          url
-          createdAt
-          mergedAt
-          labels(first: 10) { nodes { name } }
-        }
-      }
-    }`
-    )
-    .join("\n");
-
-  return `
-    query GetOpenSourceContributions {
-      totalMergedPRs: search(
-        query: "is:pr is:merged author:${GITHUB_USERNAME} -user:${GITHUB_USERNAME}"
-        type: ISSUE
-        first: 1
-      ) {
-        issueCount
-      }
-      ${repoFields}
-    }
-  `;
-};
+import { useOpenSourcePRs } from "../../hooks/useGithubPRs";
+import { useState } from "react";
 
 const Container = styled.div`
   display: flex;
@@ -131,74 +66,8 @@ const StatBadge = styled.div`
 `;
 
 const OpenSource = () => {
-  const [prData, setPrData] = useState({});
-  const [loading, setLoading] = useState(true);
+  const { prData, totalMergedPRs, loading } = useOpenSourcePRs();
   const [openModal, setOpenModal] = useState({ state: false, contribution: null });
-  const [totalMergedPRs, setTotalMergedPRs] = useState(0);
-
-  useEffect(() => {
-    const fetchAllPRs = async () => {
-      try {
-        const query = buildBatchedQuery(openSourceContributions);
-        const { data, errors } = await githubGraphQL(query);
-
-        if (errors) {
-          console.error("GraphQL errors:", errors);
-        }
-
-        setTotalMergedPRs(data?.totalMergedPRs?.issueCount || 0);
-
-        const results = {};
-        openSourceContributions.forEach(({ id }) => {
-          const openNodes = data?.[`openPRs_${id}`]?.nodes || [];
-          const mergedNodes = data?.[`mergedPRs_${id}`]?.nodes || [];
-
-          const openPRs = openNodes.map((pr) => ({
-            title: pr.title,
-            number: pr.number,
-            link: pr.url,
-            status: "Open",
-            createdAt: pr.createdAt,
-            labels: pr.labels?.nodes?.map((l) => l.name) || [],
-          }));
-
-          const mergedPRs = mergedNodes.map((pr) => ({
-            title: pr.title,
-            number: pr.number,
-            link: pr.url,
-            status: "Merged",
-            createdAt: pr.createdAt,
-            mergedAt: pr.mergedAt,
-            labels: pr.labels?.nodes?.map((l) => l.name) || [],
-          }));
-
-          const allPRs = [...openPRs, ...mergedPRs].sort(
-            (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
-          );
-
-          results[id] = {
-            prs: allPRs,
-            total: allPRs.length,
-            merged: mergedPRs.length,
-            open: openPRs.length,
-          };
-        });
-
-        setPrData(results);
-      } catch (error) {
-        console.error("GraphQL fetch failed:", error);
-        const results = {};
-        openSourceContributions.forEach(({ id }) => {
-          results[id] = { prs: [], total: 0, merged: 0, open: 0 };
-        });
-        setPrData(results);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchAllPRs();
-  }, []);
 
   return (
     <Container id="opensource">

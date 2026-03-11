@@ -1,6 +1,8 @@
+export const GITHUB_USERNAME = "ragini-pandey";
+
 export const Bio = {
   name: "Ragini Pandey",
-  roles: ["Full Stack Developer", "Programmer"],
+  roles: ["Full Stack Developer", "Programmer", "Open soruce contributor"],
   description:
     "I am a Full-stack developer with a demonstrated history of working in the information technology and product development industry",
   github: "https://github.com/ragini-pandey",
