@@ -9,11 +9,22 @@ import { useTotalMergedPRs } from '../../hooks/useGithubPRs';
 const StatsContainer = styled.div`
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin: 16px 0 16px 0;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
   font-size: 16px;
   font-weight: 500;
   color: ${({ theme }) => theme.text_primary};
+
+  @media (max-width: 960px) {
+    justify-content: center;
+    text-align: center;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+    gap: 6px;
+  }
 `;
 
 const StatBadge = styled.div`
@@ -22,6 +33,12 @@ const StatBadge = styled.div`
   padding: 6px 12px;
   border-radius: 8px;
   font-weight: 600;
+  white-space: nowrap;
+
+  @media (max-width: 640px) {
+    padding: 4px 10px;
+    font-size: 14px;
+  }
 `;
 
 const HeroSection = () => {
