@@ -4,7 +4,7 @@ export const Bio = {
   name: "Ragini Pandey",
   roles: ["Full Stack Developer", "Programmer", "Open soruce contributor"],
   description:
-    "I am a Full-stack developer with a demonstrated history of working in the information technology and product development industry",
+    "Full Stack Engineer with 3 years and 9 months of experience at US-based remote tech companies, like Wolters Kluwer and Procore Technologies. I bridge ideas and execution — turning complex requirements into production-ready products.",
   github: "https://github.com/ragini-pandey",
   resume:
     "https://drive.google.com/file/d/1Mx-cW5lQjvGhL6zllcp__Q0u-_qm-dO1/view?usp=drive_link",
