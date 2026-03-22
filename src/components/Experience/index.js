@@ -94,7 +94,7 @@ const index = () => {
                 <TimelineSeparator>
                   <TimelineDot variant="outlined" color="secondary" />
                   {index !== experiences.length - 1 && (
-                    <TimelineConnector style={{ background: "#854CE6" }} />
+                    <TimelineConnector style={{ background: "var(--primary)" }} />
                   )}
                 </TimelineSeparator>
                 <TimelineContent sx={{ py: "12px", px: 2 }}>

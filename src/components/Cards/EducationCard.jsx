@@ -37,7 +37,7 @@ const Span = styled.span`
 const Card = styled.div`
   width: 650px;
   border-radius: 10px;
-  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+  box-shadow: ${({ theme }) => theme.primary}26 0px 4px 24px;
   padding: 12px 16px;
   justify-content: space-between;
   position: relative;
@@ -64,7 +64,7 @@ const Card = styled.div`
     overflow: visible;
     -webkit-line-clamp: unset;
   }
-  border: 0.1px solid #854ce6;
+  border: 0.1px solid ${({ theme }) => theme.primary};
 `;
 
 const Top = styled.div`

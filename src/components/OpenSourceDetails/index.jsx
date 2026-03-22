@@ -331,7 +331,7 @@ const OpenSourceDetails = ({ openModal, setOpenModal }) => {
           </Tags>
           <StatsBar>
             <StatItem>
-              <StatDot color="#854CE6" />
+              <StatDot color="var(--primary)" />
               <StatText>
                 <StatCount>{prs.length}</StatCount> Total
               </StatText>

@@ -159,7 +159,7 @@ const OpenSourceCard = ({ contribution, stats, loading, onClick }) => {
       <Divider />
       <StatsRow>
         <StatItem>
-          {loading ? <SkeletonStat /> : <StatValue color="#854CE6">{stats?.total || 0}</StatValue>}
+          {loading ? <SkeletonStat /> : <StatValue color="var(--primary)">{stats?.total || 0}</StatValue>}
           <StatLabel>Total PRs</StatLabel>
         </StatItem>
         <StatItem>

@@ -1,7 +1,8 @@
 import { useState } from "react";
-import styled, { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 
-import { darkTheme, lightTheme } from './utils/Themes.js'
+import { themes } from './utils/Themes.js'
+import { ACTIVE_THEME } from './data/constants';
 import Navbar from "./components/Navbar";
 import './App.css';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -16,6 +17,21 @@ import Education from "./components/Education";
 import OpenSource from "./components/OpenSource";
 import ProjectDetails from "./components/ProjectDetails";
 
+const GlobalStyle = createGlobalStyle`
+  :root {
+    --bg: ${({ theme }) => theme.bg};
+    --bg-light: ${({ theme }) => theme.bgLight};
+    --primary: ${({ theme }) => theme.primary};
+    --text-primary: ${({ theme }) => theme.text_primary};
+    --text-secondary: ${({ theme }) => theme.text_secondary};
+    --card: ${({ theme }) => theme.card};
+    --card-light: ${({ theme }) => theme.card_light};
+    --button: ${({ theme }) => theme.button};
+    --white: ${({ theme }) => theme.white};
+    --black: ${({ theme }) => theme.black};
+  }
+`;
+
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
   width: 100%;
@@ -23,16 +39,19 @@ const Body = styled.div`
 `
 
 const Wrapper = styled.div`
-  background: linear-gradient(38.73deg, rgba(204, 0, 187, 0.15) 0%, rgba(201, 32, 184, 0) 50%), linear-gradient(141.27deg, rgba(0, 70, 209, 0) 50%, rgba(0, 70, 209, 0.15) 100%);
+  background: linear-gradient(38.73deg, ${({ theme }) => theme.primary}26 0%, transparent 50%), linear-gradient(141.27deg, transparent 50%, ${({ theme }) => theme.primary}26 100%);
   width: 100%;
   clip-path: polygon(0 0, 100% 0, 100% 100%,30% 98%, 0 100%);
 `
+
+const activeTheme = themes[ACTIVE_THEME] || themes.ocean;
+
 function App() {
-  const [darkMode, setDarkMode] = useState(true);
   const [openModal, setOpenModal] = useState({ state: false, project: null });
 
   return (
-    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+    <ThemeProvider theme={activeTheme}>
+      <GlobalStyle />
       <Router >
         <Navbar />
         <Body>

@@ -1,3 +1,8 @@
+// ── Theme Selection ────────────────────────────────────────────────
+// Change this value to switch the portfolio color scheme.
+// Options: "midnight" (blue), "ember" (orange), "forest" (green), "sakura" (pink), "golden" (yellow)
+export const ACTIVE_THEME = "midnight";
+
 export const GITHUB_USERNAME = "ragini-pandey";
 
 export const Bio = {
@@ -7,7 +12,7 @@ export const Bio = {
     "Full Stack Engineer with 3 years and 9 months of experience at US-based remote tech companies, like Wolters Kluwer and Procore Technologies. I bridge ideas and execution — turning complex requirements into production-ready products.",
   github: "https://github.com/ragini-pandey",
   resume:
-    "https://drive.google.com/file/d/1Mx-cW5lQjvGhL6zllcp__Q0u-_qm-dO1/view?usp=drive_link",
+    "https://drive.google.com/file/d/1sJrUVqjHW_9njSige2scG_GSQUAPZXQl/view?usp=drive_link",
   linkedin: "https://www.linkedin.com/in/ragini-pandey-dev/",
   twitter: "https://twitter.com/pandeyragini24",
   insta: "https://www.instagram.com/pandeyragini2407/",

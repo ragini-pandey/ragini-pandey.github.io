@@ -58,8 +58,8 @@ const StatsContainer = styled.div`
 `;
 
 const StatBadge = styled.div`
-  background: #10b98120;
-  color: #10b981;
+  background: ${({ theme }) => theme.primary}20;
+  color: ${({ theme }) => theme.primary};
   padding: 8px 12px;
   border-radius: 8px;
   font-weight: 600;
