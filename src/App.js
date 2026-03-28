@@ -16,6 +16,7 @@ import Experience from "./components/Experience";
 import Education from "./components/Education";
 import OpenSource from "./components/OpenSource";
 import ProjectDetails from "./components/ProjectDetails";
+import Butterfly from "./components/Butterfly";
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -52,6 +53,7 @@ function App() {
   return (
     <ThemeProvider theme={activeTheme}>
       <GlobalStyle />
+      <Butterfly />
       <Router >
         <Navbar />
         <Body>
