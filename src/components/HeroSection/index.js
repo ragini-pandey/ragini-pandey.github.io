@@ -44,9 +44,6 @@ const StatBadge = styled.div`
 const HeroSection = () => {
     const { totalMergedPRs } = useTotalMergedPRs();
 
-    const randomNumber = Math.floor(Math.random() * 3) + 1;
-    const randomImage = `Ragini ${randomNumber}.jpg`;
-
     return (
         <div id="about">
             <HeroContainer>
@@ -78,7 +75,7 @@ const HeroSection = () => {
                     </HeroLeftContainer>
 
                     <HeroRightContainer id="Right">
-                        <Img as={LazyImage} src={`${process.env.PUBLIC_URL}/${randomImage}`} alt="Ragini Pandey img" />
+                        <Img as={LazyImage} src={`${process.env.PUBLIC_URL}/Ragini 3.jpg`} alt="Ragini Pandey img" />
                     </HeroRightContainer>
                 </HeroInnerContainer>
             </HeroContainer>

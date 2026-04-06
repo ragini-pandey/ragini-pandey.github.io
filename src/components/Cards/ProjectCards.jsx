@@ -1,149 +1,108 @@
-import styled from 'styled-components';
+import React, { useRef, useEffect, useState } from 'react';
 import LazyImage from '../LazyImage';
 
-const Button = styled.button`
-  display: none;
-  width: 100%;
-  padding: 10px;
-  background-color: ${({ theme }) => theme.white};
-  color: ${({ theme }) => theme.text_black};
-  font-size: 14px;
-  font-weight: 700;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.8s ease-in-out;
-`;
-
-const Card = styled.div`
-  width: 330px;
-  height: 425px;
-  background-color: ${({ theme }) => theme.card};
-  cursor: pointer;
-  border-radius: 10px;
-  box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.4);
-  overflow: hidden;
-  padding: 26px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  transition: all 0.5s ease-in-out;
-  &:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 50px 4px rgba(0, 0, 0, 0.6);
-    filter: brightness(1.1);
-  }
-  &:hover ${Button} {
-    display: block;
-  }
-`;
-
-const Image = styled(LazyImage)`
-  width: 100%;
-  height: 180px;
-  background-color: ${({ theme }) => theme.white};
-  border-radius: 10px;
-  box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.3);
-`;
-
-const Tags = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 4px;
-`;
-
-const Tag = styled.span`
-  font-size: 12px;
-  font-weight: 400;
-  color: ${({ theme }) => theme.primary};
-  background-color: ${({ theme }) => theme.primary + 15};
-  padding: 2px 8px;
-  border-radius: 10px;
-`;
-
-const Details = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 0px;
-  padding: 0px 2px;
-`;
-
-const Title = styled.div`
-  font-size: 20px;
-  font-weight: 600;
-  color: ${({ theme }) => theme.text_secondary};
-  overflow: hidden;
-  display: -webkit-box;
-  max-width: 100%;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-`;
-
-const Date = styled.div`
-  font-size: 12px;
-  margin-left: 2px;
-  font-weight: 400;
-  color: ${({ theme }) => theme.text_secondary + 80};
-  @media only screen and (max-width: 768px) {
-    font-size: 10px;
-  }
-`;
-
-const Description = styled.div`
-  font-weight: 400;
-  color: ${({ theme }) => theme.text_secondary + 99};
-  overflow: hidden;
-  margin-top: 8px;
-  display: -webkit-box;
-  max-width: 100%;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
-`;
-
-const Members = styled.div`
-  display: flex;
-  align-items: center;
-  padding-left: 10px;
-`;
-
-const Avatar = styled(LazyImage)`
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  margin-left: -10px;
-  background-color: ${({ theme }) => theme.white};
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border: 3px solid ${({ theme }) => theme.card};
-`;
-
 const ProjectCards = ({ project, setOpenModal }) => {
+  const cardRef = useRef(null);
+  const [hasEntered, setHasEntered] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setHasEntered(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (cardRef.current) observer.observe(cardRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  const displayUrl = (project.webapp || project.github || '')
+    .replace(/^https?:\/\//, '')
+    .replace(/\/$/, '');
+
   return (
-    <Card onClick={() => setOpenModal({ state: true, project: project })}>
-      <Image src={project.image} alt={project.title} />
-      <Tags>
-        {project.tags?.map((tag) => (
-          <Tag key={tag}>{tag}</Tag>
-        ))}
-      </Tags>
-      <Details>
-        <Title>{project.title}</Title>
-        <Date>{project.date}</Date>
-        <Description>{project.description}</Description>
-      </Details>
-      <Members>
-        {project.member?.map((member) => (
-          <Avatar src={member.img} alt={member.name} />
-        ))}
-      </Members>
-      {/* <Button>View Project</Button> */}
-    </Card>
+    <div
+      ref={cardRef}
+      className="group project-card"
+      onClick={() => setOpenModal({ state: true, project })}
+    >
+      <div
+        className={`project-card-static-border ${hasEntered ? 'visible' : ''}`}
+        aria-hidden="true"
+      />
+      <div
+        className="project-card-spin-border"
+        aria-hidden="true"
+      />
+      <div className="project-card-inner">
+        <div className="project-card-browser-bar" aria-hidden="true">
+          <div className="project-card-dots">
+            <div className="project-card-dot" />
+            <div className="project-card-dot" />
+            <div className="project-card-dot" />
+          </div>
+          <div className="project-card-url-bar">
+            <div className="project-card-url-icon" />
+            <span className="project-card-url-text">
+              {displayUrl}
+            </span>
+          </div>
+        </div>
+
+        <div className="project-card-image-container">
+          <LazyImage
+            src={project.image}
+            alt={project.title}
+            className="project-card-image"
+          />
+          <div className="project-card-image-gradient" />
+        </div>
+
+        <div className="project-card-content">
+          <div className="project-card-content-header">
+            <div>
+              <h3 className="project-card-title">{project.title}</h3>
+              <p className="project-card-description">{project.description}</p>
+            </div>
+            <a
+              href={project.webapp || project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Open ${project.title}`}
+              className="project-card-arrow-link"
+              data-tooltip="View Live Demo"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <line x1="7" y1="17" x2="17" y2="7" />
+                <polyline points="7 7 17 7 17 17" />
+              </svg>
+            </a>
+          </div>
+
+          <div className="project-card-tags">
+            {project.tags?.map((tag) => (
+              <span key={tag} className="project-card-tag">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
