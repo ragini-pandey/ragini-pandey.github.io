@@ -347,7 +347,17 @@ export const openSourceContributions = [
     description:
       "Self-hosted, open-source AI agent with desktop installer, multi-agent Command Center, and 7-layer security. Works with Anthropic, OpenAI, or Ollama.",
     tags: ["JavaScript", "Python", "AI Agents"],
-  },  
+  },
+  {
+    id: 6,
+    org: "Nano-Collective",
+    orgLogo: "https://avatars.githubusercontent.com/Nano-Collective?s=200&v=4",
+    owner: "Nano-Collective",
+    repo: "nanocoder",
+    description:
+      "A local-first CLI coding agent built by the community for the community. Brings agentic coding to local models or controlled APIs like OpenRouter, with privacy and control in mind.",
+    tags: ["TypeScript", "CLI", "AI Agents"],
+  },
 ];
 
 export const TimeLineData = [
