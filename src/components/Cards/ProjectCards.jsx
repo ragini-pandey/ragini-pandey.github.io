@@ -53,11 +53,22 @@ const ProjectCards = ({ project, setOpenModal }) => {
         </div>
 
         <div className="project-card-image-container">
-          <LazyImage
-            src={project.image}
-            alt={project.title}
-            className="project-card-image"
-          />
+          {project.video ? (
+            <video
+              src={project.video}
+              className="project-card-image"
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+          ) : (
+            <LazyImage
+              src={project.image}
+              alt={project.title}
+              className="project-card-image"
+            />
+          )}
           <div className="project-card-image-gradient" />
         </div>
 

@@ -191,8 +191,8 @@ export const projects = [
     category: "web app",
     github: "https://github.com/ragini-pandey/fresh-issues",
     webapp: "https://fresh-issues.vercel.app",
-    image:
-      "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/fresh-issues.png?raw=true",
+    image: "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/fresh-issues.png?raw=true",
+    video: "/fresh-issues-demo.mov",
   },
   {
     id: 1,
