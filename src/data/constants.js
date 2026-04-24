@@ -196,16 +196,17 @@ export const projects = [
   },
   {
     id: 1,
-    title: "GraphQL Weather App",
-    date: "Oct 2025",
+    title: "Pomodoro Timer",
+    date: "December 2025",
     description:
-      "A GraphQL-powered weather dashboard using StepZen and Apollo to fetch real-time and forecast data. Built with type-safe queries, responsive cards, and a clean, intuitive UI.",
-    tags: ["React", "GraphQL", "Apollo", "StepZen"],
+      "A modern Pomodoro timer with customizable settings, dynamic backgrounds and Spotify integration built with React and Vite for a smooth, focused productivity experience",
+    tags: ["React", "JavaScript", "TypeScript", "Vite", "Spotify web api"],
     category: "web app",
-    github: "https://github.com/ragini-pandey/graphql-weather-app",
-    webapp: "https://graphql-weather-app.vercel.app",
+    github: "https://github.com/ragini-pandey/podomoro-timer",
+    webapp: "https://podomoro-timer-navy.vercel.app",
     image:
-      "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/graphql-weather-app.png?raw=true",
+      "https://github.com/ragini-pandey/podomoro-timer/blob/main/public/screenshot2.png?raw=true",
+    video: "/pomodoro-timer.mov",
   },
   {
     id: 2,
@@ -222,16 +223,17 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Pomodoro Timer",
-    date: "December 2025",
+    title: "GraphQL Weather App",
+    date: "Oct 2025",
     description:
-      "A modern Pomodoro timer with customizable settings, dynamic backgrounds and Spotify integration built with React and Vite for a smooth, focused productivity experience",
-    tags: ["React", "JavaScript", "TypeScript", "Vite", "Spotify web api"],
+      "A GraphQL-powered weather dashboard using StepZen and Apollo to fetch real-time and forecast data. Built with type-safe queries, responsive cards, and a clean, intuitive UI.",
+    tags: ["React", "GraphQL", "Apollo", "StepZen"],
     category: "web app",
-    github: "https://github.com/ragini-pandey/podomoro-timer",
-    webapp: "https://podomoro-timer-navy.vercel.app",
+    github: "https://github.com/ragini-pandey/graphql-weather-app",
+    webapp: "https://graphql-weather-app.vercel.app",
     image:
-      "https://github.com/ragini-pandey/podomoro-timer/blob/main/public/screenshot2.png?raw=true",
+      "https://github.com/ragini-pandey/ragini-pandey.github.io/blob/master/public/graphql-weather-app.png?raw=true",
+    video: "/graphql-weather-app.mov",
   },
   {
     id: 4,
