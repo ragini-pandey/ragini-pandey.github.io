@@ -360,6 +360,16 @@ export const openSourceContributions = [
       "A local-first CLI coding agent built by the community for the community. Brings agentic coding to local models or controlled APIs like OpenRouter, with privacy and control in mind.",
     tags: ["TypeScript", "CLI", "AI Agents"],
   },
+  {
+    id: 7,
+    org: "Internet Archive",
+    orgLogo: "https://avatars.githubusercontent.com/u/1300672?s=200&v=4",
+    owner: "internetarchive",
+    repo: "openlibrary",
+    description:
+      "One webpage for every book ever published. Open Library is an open, editable library catalog building towards a web page for every book ever published.",
+    tags: ["Python", "JavaScript", "Open Data"],
+  },
 ];
 
 export const TimeLineData = [
