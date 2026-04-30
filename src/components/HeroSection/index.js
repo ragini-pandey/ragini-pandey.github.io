@@ -75,7 +75,7 @@ const HeroSection = () => {
                     </HeroLeftContainer>
 
                     <HeroRightContainer id="Right">
-                        <Img as={LazyImage} src={`${process.env.PUBLIC_URL}/Ragini 3.jpg`} alt="Ragini Pandey img" />
+                        <Img as={LazyImage} src={`${import.meta.env.BASE_URL}Ragini 3.jpg`} alt="Ragini Pandey img" />
                     </HeroRightContainer>
                 </HeroInnerContainer>
             </HeroContainer>

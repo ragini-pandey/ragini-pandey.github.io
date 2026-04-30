@@ -1,18 +1,19 @@
 import { render, screen } from '@testing-library/react';
+import { describe, test, expect, beforeEach, afterEach, vi } from 'vitest';
 import App from '../App';
 
 // Mock the GitHub PR fetch hooks so tests don't hit the network
-jest.mock('../hooks/useGithubPRs', () => ({
+vi.mock('../hooks/useGithubPRs', () => ({
   useTotalMergedPRs: () => ({ totalMergedPRs: 42, loading: false, error: null }),
   useOpenSourcePRs: () => ({ prData: [], totalMergedPRs: 0, loading: false, error: null }),
 }));
 
 // Suppress styled-components / MUI prop warnings in test output
 beforeEach(() => {
-  jest.spyOn(console, 'error').mockImplementation(() => {});
+  vi.spyOn(console, 'error').mockImplementation(() => {});
 });
 afterEach(() => {
-  jest.restoreAllMocks();
+  vi.restoreAllMocks();
 });
 
 describe('App', () => {
