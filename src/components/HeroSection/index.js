@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import HeroBgAnimation from '../HeroBgAnimation'
-import { HeroContainer, HeroBg, HeroLeftContainer, Img, HeroRightContainer, HeroInnerContainer, TextLoop, Title, Span, SubTitle,SocialMediaIcons,SocialMediaIcon, ResumeButton } from './HeroStyle'
+import { HeroContainer, HeroBg, HeroLeftContainer, Img, HeroRightContainer, HeroInnerContainer, TextLoop, Title, Span, SubTitle, ResumeButton } from './HeroStyle'
 import Typewriter from 'typewriter-effect';
 import { Bio } from '../../data/constants';
 import LazyImage from '../LazyImage';
@@ -75,7 +75,7 @@ const HeroSection = () => {
                     </HeroLeftContainer>
 
                     <HeroRightContainer id="Right">
-                        <Img as={LazyImage} src={`${process.env.PUBLIC_URL}/Ragini 3.jpg`} alt="Ragini Pandey img" />
+                        <Img as={LazyImage} src={`${import.meta.env.BASE_URL}Ragini 3.jpg`} alt="Ragini Pandey img" />
                     </HeroRightContainer>
                 </HeroInnerContainer>
             </HeroContainer>

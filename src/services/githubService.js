@@ -7,7 +7,7 @@ export const githubGraphQL = (query) =>
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${process.env.REACT_APP_GH_TOKEN_P1}${process.env.REACT_APP_GH_TOKEN_P2}`,
+      Authorization: `Bearer ${import.meta.env.VITE_GH_TOKEN_P1}${import.meta.env.VITE_GH_TOKEN_P2}`,
     },
     body: JSON.stringify({ query }),
   }).then((res) => res.json());
