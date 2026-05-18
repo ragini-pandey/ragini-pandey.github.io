@@ -2,12 +2,17 @@ import { GITHUB_USERNAME } from "../data/constants";
 
 const GITHUB_GRAPHQL_URL = "https://api.github.com/graphql";
 
+const getAuthHeader = () => {
+  const parts = [import.meta.env.VITE_GH_TOKEN_P1, import.meta.env.VITE_GH_TOKEN_P2];
+  return "Bearer " + parts.join("");
+};
+
 export const githubGraphQL = (query) =>
   fetch(GITHUB_GRAPHQL_URL, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${import.meta.env.VITE_GH_TOKEN_P1}${import.meta.env.VITE_GH_TOKEN_P2}`,
+      Authorization: getAuthHeader(),
     },
     body: JSON.stringify({ query }),
   }).then((res) => res.json());
